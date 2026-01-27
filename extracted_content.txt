@@ -1,0 +1,1584 @@
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+SHUNCOM RULR IOT PLATFORM
+USER MANUAL
+
+Shanghai Shuncom AIOT Co., Ltd
+1 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Copyright:
+All contents contained in this manual are protected by copyright law. Without the
+written authorization of Shanghai Shuncom AIOT Co., Ltd, no organization or individual
+may copy or reproduce the entire manual or part of the contents in any form or by any
+means.
+The company reserves the right to modify, interpret and publish this manual without
+making any prior statement.
+
+Contents
+SHUNCOM RULR IOT PLATFORM ...................................................................................................... 1
+Part I Platform Basic Introduction .......................................................................................................... 5
+1.1 Login ................................................................................................................................................. 5
+1.2 Home Page ....................................................................................................................................... 5
+1.3 Preferences ...................................................................................................................................... 6
+1.3 Back-end System .............................................................................................................................. 7
+Part II Back-end System .......................................................................................................................... 8
+2.1 Basic Configuration .......................................................................................................................... 8
+2.1.1 Organization and User .......................................................................................................... 8
+2.1.1.1 User Management............................................................................................. 8
+2.1.1.1.1 User List................................................................................................... 8
+2.1.1.1.2 Add and Edit User ................................................................................... 8
+2.1.1.1.3 Role Association ...................................................................................... 9
+2.1.1.1.4 Associate Management Scope .............................................................. 10
+2.1.1.2 Organization Management ............................................................................. 10
+2.1.1.3 Permission Management ................................................................................ 12
+2.1.1.3.1 User Role ............................................................................................... 12
+2.1.1.3.2 Add User Role ....................................................................................... 12
+2.1.1.3.3 Management Scope .............................................................................. 14
+2.1.1.4.4 New Management Scope ...................................................................... 14
+2 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.2 Device Management ...................................................................................................................... 15
+2.2.1 Device Configuration ........................................................................................................... 15
+2.2.1.1 Product Category ............................................................................................. 15
+2.2.1.1.1 Smart Gateway ...................................................................................... 16
+2.2.1.1.2 Smart Light Controller ........................................................................... 21
+2.2.1.1.4 Lighting Fixture ..................................................................................... 26
+2.2.1.1.5 Lighting Pole .......................................................................................... 27
+2.2.1.1.6 Power Distribution Control ................................................................... 29
+2.2.1.1.7 Loop control .......................................................................................... 30
+2.2.1.1.8 Smart Meter .......................................................................................... 31
+2.2.2 Device group ....................................................................................................................... 33
+2.2.2.1 Group List ........................................................................................................ 33
+2.2.2.2 Add new device group .................................................................................... 34
+2.2.2.3 Create Hardware Grouping ............................................................................. 35
+2.2.2.3 Added lamp grouping and loop group ........................................................... 37
+2.2.3 Remove device .................................................................................................................... 38
+2.2.4 Devices Import and Export.................................................................................................. 38
+2.2.5 Recycle Bin .......................................................................................................................... 39
+2.3 Project Management ..................................................................................................................... 40
+2.3.1 Project List Management .................................................................................................... 40
+2.3.1.1 Basic Information ............................................................................................ 40
+2.3.1.2 Display Information......................................................................................... 42
+2.3.1.2.1 Basic Setting for Display Information .................................................... 42
+2.3.1.2.2 Lighting Schedules Setting .................................................................... 43
+2.3.1.2.3 Electricity Consumption Plan (ECP) ...................................................... 44
+2.3.1.2.4 Energy Saving Overview Setting............................................................ 45
+2.3.1.2.5 Preview.................................................................................................. 45
+2.3.1.2.6 Batch Apply ........................................................................................... 46
+2.3.2 Associated Devices .............................................................................................................. 46
+2.3.3 Device Distribution.............................................................................................................. 47
+2.3.3.1 GIS Map Distribution....................................................................................... 47
+2.4 Rule Management .......................................................................................................................... 48
+2.4.1 Running Rules ..................................................................................................................... 48
+3 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.4.1.1 Platform Rules ................................................................................................. 48
+2.4.1.2 Examples of Platform Rules Settings .............................................................. 56
+2.4.1.3 Local Rules ....................................................................................................... 57
+2.4.2 Alarm Rules ......................................................................................................................... 60
+2.4.2.1 Platform Alarms .............................................................................................. 60
+2.4.2.2 Example of Platform Alarm Configuration ..................................................... 65
+2.4.2.3 Offline Alarm ................................................................................................... 66
+2.4.2.4 Device Alarms .................................................................................................. 66
+2.4.3 Other Configurations .......................................................................................................... 67
+2.4.3.1 Receiving Group Configurations ..................................................................... 67
+2.4.3.2 Alarm Level ...................................................................................................... 68
+2.4.4 Update Rules ....................................................................................................................... 68
+2.5 Homepage ...................................................................................................................................... 69
+2.5.1 Statistical Data Overview .................................................................................................... 69
+2.5.2 Operation Control ............................................................................................................... 69
+2.5.2.1 GIS Map ........................................................................................................... 69
+2.5.2.2 List of Devices .................................................................................................. 71
+2.5.2.2.1 Device List ............................................................................................. 71
+2.5.2.2.2 List of the Details of Devices ................................................................. 72
+2.5.3 Statistical Analysis ............................................................................................................... 74
+2.5.4 Opention and maintenance ................................................................................................ 76
+2.5.5 Rule management ............................................................................................................... 77
+2.5.6 System Log .......................................................................................................................... 78
+
+Disclaimer
+Shuncom shall take no responsibility for device malfunction due to improper
+platform operations or any violation of this manual.
+
+4 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Part I Platform Basic Introduction
+1.1 Login
+It is recommended to use Google Chrome for operating Shuncom RULR platform.
+Enter the URL: https://rulr-aiot.com in the browser address bar to access the login page.
+
+Account Login Page
+
+1.2 Home Page
+After Login to the home page, the user can view Dashboard, Alarm, Rule Management, Statistical
+Analysis, System Log, view and control devices. Check more details in section 2.5 Home Page.
+
+5 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Home Page
+
+1.3 Preferences
+Click ‘Preferences’ in My Account (top-right icon) to select the Time Zone where the project is located.
+Time Zone affects local time of devices, executions of Platform Rules, Local Rules and Alarm Rules.
+
+Preferences Setting
+6 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Select Time Zone
+
+1.3 Back-end System
+Click the Settings icon to enter the back-end system for configurations. Check more details in Part II
+Back-end System.
+
+Settings
+7 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Part II Back-end System
+2.1 Basic Configuration
+2.1.1 Organization and User
+2.1.1.1 User Management
+2.1.1.1.1 User List
+Access Path: Settings > Basic Configuration > Organization and Users > User Management
+By default, the user would be navigated to ‘User Mangement’ page, which shows full User List under
+this account. The user account can be enabled, disabled, edit and delete. The user cannot login the
+system once its account is disabled by administrator.
+
+User List
+
+2.1.1.1.2 Add and Edit User
+Administrator is able to create account for new user.
+Access Path: Organization and Users > User Management > +Add Users
+Enter the required account information, Platform Role and Management Scope (Check section
+8 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.1.1.3 Permission Management if there is no Platform Role and Management Scope), the account
+would be created once the filled information is successfully verified.
+
+Add user
+
+2.1.1.1.3 Role Association
+Roles are function rights management of the platform. Users can create and associate user roles
+based on actual management requirements. The associated roles list is created in 2.1.1.3.1 User Roles.
+A user can be associated with multiple roles, as shown in the figure below.
+
+User associate with Role
+9 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.1.1.1.4 Associate Management Scope
+Management Scope includes management rights of Project, Group and Product Catgory. The list of
+associated management scopes is created in 2.1.1.3.3 Management Scope. A user can be associated
+with multiple management scopes.
+
+Associate Management Scope
+
+2.1.1.2 Organization Management
+Access Path: Settings > Basic Configuration > Organization and Users > Organization Management.
+Organization management is the description of the overall information of the tenant organization.
+Click ‘Edit’, users can upload a logo, and the uploaded logo will be displayed in the upper left corner.
+The detailed information is shown in the figure below.
+
+10 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Organization Management
+
+Upload LOGO
+11 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.1.1.3 Permission Management
+2.1.1.3.1 User Role
+Access Path: Settings > Basic Configuration > Organization and Users > Permission Management >
+User Role.
+All roles are displayed in the User Role list. User roles are mainly related to operation permissions,
+which determine which pages the user can view and which functions of the page can be operated,
+as shown below.
+
+Role Management
+
+2.1.1.3.2 Add User Role
+Access Path: Settings > Basic Configuration > Organization and Users > Permission Management >
+Add role.
+Enter the role name and role description, then configure the role's permissions, and finally assign the
+role to the user. One role can be associated with multiple users, and one user can also be associated
+with multiple roles. The figure below shows where to add new role.
+
+12 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Creat a New Role and Description
+Access Path: Settngs > Basic Settings > Organization and Users > User Roles > Configure User Roles,
+and tick the boxes to manage each role.
+
+Associated User Permissions
+
+13 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.1.1.3.3 Management Scope
+Access Path: Settings > Basic Configuration > Organization and Users > Permission Management >
+Management Scope.
+On the left side, a list of management scopes is displayed, which determines what projects, product
+categories, and groups a user can view. Tenant administrators have all management scopes by
+default, while ordinary users have limited management scopes that configured by administrator.
+The list of roles is shown in the figure below.
+
+List of Management Scope
+
+2.1.1.4.4 New Management Scope
+Access Path: Settings > Basic Configuration > Organization and Users > Permission Management >
+Configure Management Scope.
+Users need to select the Product Categories, Projects, and Groups they wish to display to other users.
+By default, each user will have one default group for unassigned projects and another default group
+for 'Ungrouped'.
+
+14 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Configuration Management Scope
+
+2.2 Device Management
+2.2.1 Device Configuration
+2.2.1.1 Product Category
+Access Path: Settings > Equipment Management > Device Configuration > Type.
+It displays a list of devices categorized by product types. Currently, the supported product categories
+for display include: Smart Gateway, Smart Light Controller, Lighting Fixture, Lighting Pole, Power
+Distribution Ccontrol, and Loop Control.
+Common Features of the List of Devices:
+1. Supports column settings, displaying all the fields in the list. Once set, these settings will remain
+effective for the account permanently.
+2. The device list supports fuzzy search by device name and device address.
+3. The device list supports sorting by device name and device number.
+4. Each device listing allows for double-clicking to enter the view and edit page.
+5. If a device has unaddressed alarms, an exclamation mark "!" will appear at the top of the device
+listing.
+15 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+6. If a device is unavailable or has not been added to inventory, it will be marked with a symbol (
+
+).
+
+The list of devices varies in content depending on the different product categories, as detailed below.
+
+2.2.1.1.1 Smart Gateway
+➢ List of Devices
+The Smart Gateway list supports the display of the followings: Device Name, Device Number,
+Associated Product, Online Status, Three-Phase Electricity Information, Loop Collection, Local Time,
+Screen Password, and Update Time. Currently, these are the most comprehensive fields available.
+Depending on the specific model and functionalities of the product, important information is selected
+for display. Fields without data will be represented by a dash ('-'), as shown in the figure below.
+
+List of Devices - Smart Gateway
+If the type of the gateway is loop control concentrator (Star box gateway), then the device possesses
+loop functionality. If a loop controller has been configured, the list will display the loops under the
+device, allowing loops to be able to disconnect or close individually.
+
+16 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Loop Control of (Star box) Gateway
+
+➢ Add Device (Star box Gateway)
+Access Path: Settings > Equipment Management > Device Configuration > Type > Smart Gateway >
++ Add Device.
+For adding a new gateway type product, one needs to input: Device Name, Product Name (Star box
+Gateway), Device Number (MAC address), Associated distribution box, Associated circuit control, Lat
+& Long (either manually input or automatically obtained, synchronized with the distribution on the
+project map), Altitude, Parent Project (selected from 2.3 Project Management), and Belonging Group
+(selected from the device list groups). Among these, Device Name, Product Name, and Device
+Number are mandatory fields, as illustrated in the figure below.
+
+17 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Add New Smart Gateway
+Product introduction supports text, images, links, and attachments (including Office files). It can be
+edited based on the actual details of the product. After editing, the information can be applied in
+batch to other devices of the same product, reducing repetitive editing operations. The product
+introduction editing process is illustrated in the figure below.
+
+Editing Page of Smart Gateway Information
+18 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+➢ How to configure Gateway Circuit：
+1. First, add the gateway. Navigate to Settings > Equipment Management > Device Configuration >
+Type > Smart Gateway > + Add Device. Enter the device name, product name, and device number.
+Click the save button. Alternatively, you can import in batch via Excel.
+2. Next, either import circuits in batch or add individual circuit controller devices (refer to 2.2.1.1.7
+Loop Control).
+3. Tick the gateway, then click on 'Configure Circuits'. The selected gateway will then generate the
+corresponding circuits in batch.
+4. This step is for individually generating or editing circuits. If step 3 is already completed, this step
+can be skipped: Navigate to Settings > Device Management > Device Configuration > Type > Smart
+Gateway > Edit Device. Click on the 'Circuit Configuration' button. The circuit sequence number
+will be generated automatically. Users can configure the Circuit sequence number (mandatory
+and unique), Control remark name (mandatory), Circuit collection, Collection attributes, Phase,
+collection remark name, and current ratio (default is 1). If user does not want to display a
+particular circuit, click on 'Hide' in the actions.
+Note: Make sure to click 'Configure Circuits' or 'Save' on the ‘Configure Now’ page, then the list will
+display the circuits. Configure the circuits according to the actual situation, as shown in the figure
+below.
+
+Configuration Cicuits in batch
+
+19 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Configure loops for Individual Gateway
+
+Configure loops for Individual Gateway
+➢ Other Operations
+1. Set password for screen: You can set a 6-digit numeric screen password for the gateway.
+2. Synchronize devices: Synchronize the sub-device information of the gateway from the platform
+to the device's local end.
+3. Configure circuits: Configure the gateway's circuits by bulks, targeting only those circuits that
+20 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+haven't been configured yet.
+4. Clear local rules: Erase all local rules.
+5. Three-phase electric ratio: Set the ratio.
+
+More Operations
+
+2.2.1.1.2 Smart Light Controller
+➢ List of Devices
+The list of items displayable by Smart Light Controller are: Device Name, Device Number, Product
+Name, Online Status, Lamp Status (will only be displayed after associating with a lamp), Voltage,
+Current, Active Power, Power Factor, Active Energy, Run Time, Local Time, Frequency, Color
+Temperature, Illuminance, Signal Strength, IMSI, Version, Connected Base Station, and Update Time.
+Depending on the actual model and functions of the product, important information is selected for
+display. If there's no data available for a particular field, it will be represented by a "-" as shown in the
+figure below.
+
+21 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+List of Devices - Smart Light Controller
+Light Controller supports configuration commands such as clear, timing calibration, enabling local
+rules, reading, device synchronization, and GPS switch.
+
+Configuration of the Light Controller
+
+22 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+➢
+
+Add Device
+
+1. Pass-through Devices (Zigbee_V3 light controller, Dual-way Zigbee_V3 light controller)
+Access Path: Settings > Equipment Management > Device Configuration > Type > Smart Light
+Controller > + Add Device.
+When adding a new gateway-type product, the necessary fields to input include Device Name,
+Product Name (Zigbee_V3 light controller, Dual-way Zigbee_V3 light controller), Device Number
+(Device Address), Gateway, Light Pole, Associated luminaries (it is essential to associate a lamp; check
+2.2.1.1.4 Lighting Fixture to add the lamp first), Lat & and Long (either manually input or autoobtained, synchronized with the coordinates displayed on the project map), Altitude, Project
+(selected from 2.3 Project Management), and Belonging Group (selected from the device list group).
+As shown in the figure below.
+
+Add New Smart Light Controller - Sub-device of Gateway
+2. Directly-communicated Devices (NB-IoT, CAT.1 light controller)
+Access Path: Settings > Equipment Management > Device Configuration > Type > Smart Light
+Controller > + Add Device. When adding a new gateway type product, user need to input the Device
+Name, Product Name (e.g. Cat.1-V3 light controller, check product type with supplier), Device
+Number (Device Address), Light Pole, and Associated Luminaires (it's essential to associate a luminaire;
+refer to 2.2.1.1.4 Lighting Fixture to add the luminaire, otherwise, the lamp cannot be controlled in
+the list), Lat & Long (manually input, locate in map or automatically acquired), Altitude, Project (select
+in 2.3 Project Management), Belonging Group (select in Device List Group), as shown in the figure
+below.
+23 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Add new Smart Light Controller - Directly-communicated Devices
+
+Add new Smart Light Controller - Dual-way Light Controller Device.
+3. Add LoRa Light Controller
+Access Path: Settings > Equipment Management > Device Configuration > Type > Smart Light
+Controller > + Add Device.
+When adding a new gateway type product, user need to input the Device Name and select the
+Product Name (LoRa Light Controller). Upon selecting the LoRa Light Controller, two network access
+24 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+modes, OTAA and ABP are supported.
+1) When the network activation mode of device is OTAA, the parameters which need to fill up are
+DEVEUI, DEV_PROFILE (Channel Plans), APPEUI (which can be duplicated), APPKEY, Light Pole,
+Associated Luminaire (it's crucial to associate to a luminaire; firstly, go to 2.2.1.1.4 Lighting Fixture
+to add the luminaire, otherwise the luminaire status in the list will be blank, rendering the
+luminaire uncontrollable), Lat & Long (either input manually or auto-obtained, synchronized with
+the Lat & Long displayed on the project map), Altitude, Project (selected from 2.3 Project
+Management), and Group (chosen from the device list groups). As shown in the figure below.
+
+Add new Smart Light Controller - LoRa Light Controller OTAA Mode
+2) When the network activation mode of device is ABP, the parameters which need to fill up are
+DEVEUI, DEVE_PROFILE, DEVADDR, APPSKEY, NWKSKEY, Light Pole, Associated Luminaires (it's
+crucial to link to a luminaire; firstly, go to 2.2.1.1.4 Lighting Fixture to add the luminaire, otherwise
+the luminaire status in the list will be blank, rendering the luminaire uncontrollable), Lat & Long
+(either input manually or auto-obtained, synchronized with the Lat & Long displayed on the
+project map), Altitude, Project (selected from 2.3 Project Management), and Group (chosen from
+the device list groups). As shown in the figure below.
+
+25 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Add new Smart Light Controller - LoRa Light Controller ABP Mode
+
+2.2.1.1.4 Lighting Fixture
+➢ Device List
+The following fields can be displayed in the Device List of Lighting Fixture: Device Name, Device
+Number, Product Name, Project, Belonging Group, Associated Light Controller. As shown in the figure
+below.
+
+Device List - Lighting Fixture
+26 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+➢ Add new device (Lighting Fixture)
+Access Path: Settings > Equipment Management > Device Configuration > Type > Lighting Fixture > +
+Add Device.
+User can add luminaire first, and then add light controller (associate the light controller with the
+lighting fixture), or vice versa. As shown in the figure below.
+
+Add new Lighting Fixture
+
+2.2.1.1.5 Lighting Pole
+➢ Device List
+The following fields can be displayed in the Device List of Lighting Fixture: Device Name, Device
+Number, Product Name, Project, Belonging Group, Number of subordinate devices. As shown in the
+figure below.
+
+27 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Device List - Lighting Pole
+➢ Add device (Lighting Pole)
+Navigate to Configuration > Equipment Management > Device Configuration > Type > Lighting Pole >
+Add Device page to add a new lighting pole product type (ordinary light pole), as shown in the figure
+below.
+
+Add new Lighting Pole
+
+28 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.2.1.1.6 Power Distribution Control
+➢ Device List
+The fields supported by the power distribution cabinet list include: Device Name, Device Number,
+Product Name, Project, and Belonging Group. As shown in the figure below.
+
+Device List - Power Distribution Control
+➢ Add device (Power Distribution Box)
+Navigate to Settings > Equipment Management > Device Configuration > Type > Power Distribution
+Control > + Add Device page to add a power distribution cabinet product type, as shown in the figure.
+
+Add new Power Distribution Control (Box)
+29 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.2.1.1.7 Loop control
+➢ Device list
+The fields supported by the loop control list are: Device Name, Device Number, Product, Online Status,
+Associated Gateway, Project, Belonging Group, and Update Time. As shown in the figure below.
+
+Loop Controller List
+➢ Add devices (built-in loop controller, extended loop controller)
+Navigate to Setting > Equipment Management > Device Configuration > Type > Loop Control > + Add
+Device page to add a new device type product. Enter the device name, the product it belongs to (builtin loop controller, extended loop controller), the device number (device number of built-in loop
+controller is fixed at 0, and the device number range of the extended loop controller is 4-255), the
+associated gateway (select the corresponding gateway), the downlink channel (the built-in loop
+controller is fixed at 11, the extended loop controller is fixed at 1 or 2. Check the connected port
+number), sub-device protocol (the built-in loop controller is fixed to GWLOOP, and the external loop
+controller is fixed to Modbus), latitude and longitude (input or automatically obtained, synchronized
+with the latitude and longitude distributed on the project map), altitude , belonging project (selected
+in 2.3 project management), belonging group (selected in the equipment list group). as shown in the
+figure below.
+
+30 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Add Loop Control
+
+2.2.1.1.8 Smart Meter
+➢ Device list
+The fields supported by the smart meter list include: Device Name, Device Number, Product, Online
+Status, Data Preview, Transformation Ratio, Gateway, Associated Control Box, Project, Belonging
+Group, and Update Time. Fields to display can be selected according to column settings, as shown in
+the figure below.
+
+List of Smart Meter Devices
+31 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+The smart meter supports more configurations: device synchronization, which synchronizes subdevice information to the gateway; three-phase transformer ratio, supports setting the current
+transformer ratio, and displays the data in multiples.
+
+Smart Meter - Device Synchronization and Three-phase Transformation Ratio
+➢ Add device (485 three-phase electricity meter)
+Navigate to Settings > Equipment Management > Device Configuration > Type > Smart Meter > + Add
+Device page to add a new device type product. You need to enter the device name, product (485
+three-phase meter), device number (12-digit address of the meter), and association. Gateway (select
+the corresponding gateway), downlink channel (the default downlink channel of the electric meter is
+2), sub-device protocol (the protocol of the electric meter is dlt645_07), longitude and latitude (input
+or automatically obtained, synchronized with the longitude and latitude distributed on the project
+map), Altitude, project (selected in 2.3 Project Management), group (selected in the equipment list
+group), as shown in the figure below.
+
+32 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Add new Smart Meter
+
+2.2.2 Device group
+2.2.2.1 Group List
+Navigate to Setting > Equipment management > Device Configuration > Group page, which shows the
+group association of the device. The list is displayed according to product type, and each device list is
+displayed according to 2.2.1.1 Product Category, as shown in the figure below.
+
+Subgroup - Light Controller Grouping
+33 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.2.2.2 Add new device group
+Access Path: Configuration > Equipment Management > Device Configuration > Grouping Page > Add
+a new subgroup.
+Enter the group name, select product category, enter the frequency ID, group description, and select
+the location information, longitude and latitude, and specific address. User can save directly or
+associate devices to this group and then save together.
+
+Add a Group
+
+Associated Devices
+34 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.2.2.3 Create Hardware Grouping
+➢ If the devices are Zigbee light controller or LoRa light controller, user can use multicast function.
+➢ Zigbee multicast: users need to manually enter the group number, associate the lamps, and then
+set the group number for each lamp. The group number range of smart light control can be filled
+in 1-255.
+➢ LoRa multicast: users need to manually enter the group number (1, 2, 3) and frequency band.
+The platform can create multiple groups, each of which can be controlled independently.
+➢ After the device is associated, the synchronization result will appear. If there is a device that fails
+to synchronize, click Sync and send to ensure that all devices can be synchronized successfully.
+
+Add Zigbee Multicast Group
+
+Add LoRa Multicast Group
+35 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Grouping that support multicast - Associated Devices
+
+Grouping that support multicast - Synchronization Result
+
+36 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.2.2.3 Added lamp grouping and loop group
+Support grouping of luminaires: user can set two lamps that controlled by a dual-way light
+controller into a group.
+Support grouping of loops: user can set several loops of the gateway into the same group.
+
+Luminaire Grouping
+
+Loop Grouping
+37 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.2.3 Remove device
+Regarding deleting a device, if the checked device has a binding relationship, such as rule association,
+group association, item association, gateway sub-device, etc., a pop-up window will appear on the
+platform, prompting that the device can only be deleted after the binding relationship is removed.
+If a gateway is deleted, the sub-devices of the gateway will not be deleted. After deletion, they can
+be restored in the Recycle Bin.
+
+Delete Device - Unbind
+
+2.2.4 Devices Import and Export
+Access Path: Settings > Equipment Management > Device Configuration > Type.
+Click the "Batch Import" button, the download template and file upload buttons will pop up, first
+download the template, fill in the data in the sheet, and then upload the selected file. The templates
+for different device types are different, choose the correct template. Currently, the system supports
+importing 5,000 pieces of data at a time. As shown in the figure below.
+Click ‘ Basic Data’ from ‘Batch Export’ dropdown menu to export data of all devices in the device list.
+Data of filtered devices can be exported as well. It supports exporting 5,000 devices at a time.
+
+38 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Batch Import of Devices
+
+Batch Export Data
+
+2.2.5 Recycle Bin
+Access Path: Settings > Equipment Management > Recycle Bin page.
+The deleted devices will retain the original basic information (product category, product, device code,
+39 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+channel information), but the historical data of the device will not be saved. The system supports
+restoring devices and emptying the recycle bin. Restore will return to the original deleted location.
+Once the recycle bin is cleared, deleted devices cannot be restored and needs to be added again, as
+shown in the figure below.
+
+Recycle Bin
+
+2.3 Project Management
+2.3.1 Project List Management
+2.3.1.1 Basic Information
+Access Path: Settings > Equipment Management > Device Configuration > Project.
+This page shows the basic information of project management, including the information of the
+project tree. In details it shows information of the associated equipment and the information of the
+sub-projects under the project. As shown in the figure below.
+
+40 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Project information
+Projects support adding, deleting, modifying and checking, and support management division
+according to project level. Top-level projects and unassigned projects are generated by default and
+cannot be deleted. If the device is not assigned, it will automatically be assigned to the unassigned
+project, which can be seen by all users, so it is recommended that users associate all devices with
+specific projects. As shown in the figure below.
+
+Added Basic Project Information (GIS Map)
+
+41 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.3.1.2 Display Information
+2.3.1.2.1 Basic Setting for Display Information
+Access Path: Settings > Equipment Management > Device Configuration > Edit Project > Display
+information
+In this page, user can configure the 8 modules to be displayed in the Overview mainpage.
+
+Configure Homepage of Display Information
+➢ Project support display styles selection including technology style and future style;
+➢ Project support title settings including name, font, color, etc.;
+➢ Lighting distribution to show the light controllers on the GIS map;
+➢ Some of the modules would only be displayed in the Homepage when their switch is turned on,
+and some of the modules require user to set contents so as to be displayed.
+
+42 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.3.1.2.2 Lighting Schedules Setting
+Access Path: Display information > Usage scenario > smart lighting > lighting schedules today.
+Lighting schedules can be accosciated with the illuminace sensor, input the light on/off threshold to
+trigger.
+The light on and light off time can either be preset fixed time, or sunrise and sunset time (generated
+from longitude and latitude of devices).
+The configured lighting schedules would be displayed in the homepage.
+
+Daily Lighting Schedules
+
+Lighting On / Off time
+43 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.3.1.2.3 Electricity Consumption Plan (ECP)
+Access Path: Display Information > ECP > Setting.
+User can configure the energy consumption plan for future years. Select the year and enter the annual
+plan value, then the annual plan value will be divided evenly into each month and day. At the same
+time, user can adjust the plan for each month and each day. When the warning percentage is
+exceeded, the power consumption plan in the data overview displays red, and within the normal
+range, it displays green.
+Energy Saving Rate = [(Planned energy consumption accumulated to yesterday - Actual energy
+consumption accumulated to yesterday) / Planned energy consumption accumulated to
+yesterday]*100%
+
+Electricity Consumption Plan Configuration
+
+44 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.3.1.2.4 Energy Saving Overview Setting
+Display Information > Energy Saving Overview, to set where the energy consumption come from.
+
+Energy Saving Overview Setting
+
+2.3.1.2.5 Preview
+Display information > Preview. By dragging the modules to customize dashboard.
+
+Preview Page
+45 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.3.1.2.6 Batch Apply
+Access Path: Display Information > Batch Apply.
+The present configurations can be copied into other projects.
+
+Batch Apply
+
+2.3.2 Associated Devices
+Access Path: Settings > Equipment Management > Project > Associated Devices.
+Select the devices that needs to be associated with the project (or directly associate the
+corresponding project when importing devices). User can also disassociate the devices and move it
+out of the project, as shown in the figure below.
+
+Associated Devices
+46 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.3.3 Device Distribution
+2.3.3.1 GIS Map Distribution
+When creating project, GIS map is selected as the environment background by default.
+Access Path: Settings > Equipment Management > Project > Distributed Devices
+The list of associated devices under the project and the icon position of the associated devices on the
+map are displayed. The device supports single distribution and batch selection of batch distribution,
+and adjust slightly to individual device coordinates after distribution is possible.
+The search box supports device name, device number, and supports filtering of different products.
+Note: Device distribution is only available in second-level projects.
+
+Access to Device Distribution
+➢ Single device distribution
+Search and locate the approximate location on the map——Select 1 device——Batch distribution —
+—Find the location, double-click to refresh the location of a single device
+➢ Batch devices distribution
+Search and locate the approximate location on the map——Select >2 devices——Batch distribution—
+—Find the position and click the mouse once to draw the path——Double-click the mouse to
+47 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+terminate the line drawing, and the devices are evenly distributed on the line to refresh the status
+➢ Fine-tuning coordinate
+The premise is that the equipment has been distributed on the map.
+Fine-tuning coordinate——After the mouse clicks on the device, drag the mobile fine-tuning on the
+map—— Save——Refresh location.
+
+Batch distribution
+
+2.4 Rule Management
+2.4.1 Running Rules
+2.4.1.1 Platform Rules
+Access Path: Rule Management > Running Rules > Platform Rules, all rules listed there.
+One platform rule supports the setting of multiple sub-rules, each sub-rule is executed independently,
+and each sub-rule can combine multiple trigger conditions (supports the selection of triggering when
+any condition is met or triggering when the conditions are met at the same time) and multiple
+execution actions.
+48 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+List of Platform Rules
+Click ‘Add Platform Rule’, to enter the Rule setting page.
+Input Rule Name, Rule Type, Effective date, Repeat period (daily/weekly/monthly), and remarks (not
+mandatory).
+
+Add Platform Rules
+
+➢ Trigger condition
+Conditional triggers include attribute triggers, time triggers, time ranges, and other triggers.
+Combinations between conditions and conditions are possible. When the trigger condition is met,
+49 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+the corresponding action will be executed。
+1. Attribute trigger
+✓ Attribute triggering is to use the attribute data reported by the device to trigger the action.
+
+Attribute Trigger
+2. Time trigger
+✓ Support timing trigger, sunrise time/sunset time (need to select latitude and longitude), interval
+time.
+
+Timing Trigger
+50 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Sunrise Time Setting
+3. Time range
+✓ Select time range, show select box for valid time period.
+✓ This condition cannot exist alone, and is usually combined with attribute triggers.
+
+Time Range
+
+51 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+4. Other trigger
+✓ The online status of the device, supporting online status or offline status.
+✓ This condition cannot exist alone, and is usually combined with attribute triggers.
+
+Online Status
+5. Trigger times
+✓ In the last xx minutes, if the trigger condition meets the number of triggers within the specified
+time, the action will be executed.
+✓ This condition cannot exist alone, and is usually combined with attribute triggers.
+
+Tigger Times
+52 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+6. Meet any conditions notes
+✓ After adding 2 conditions, select "Meet both conditions" and "Meet any condition".
+✓ Some conditions cannot be combined, such as time trigger and time trigger cannot be combined,
+online status and time range cannot be used alone as a trigger condition, and need to be triggered
+with other conditions.
+✓ There can be only one time range in a subrule.
+
+➢ Trigger condition device
+✓ 1 attibute trigger device can be only associated with 1 device.
+
+➢ Execute Action
+✓ Choose product category and select the execute action.
+1. Invoke service
+✓ Different product categories to different services. E.g. smart gateway selected, the services of
+related gateway will appear. Smart light selected, the services of related smart lighting will appear.
+
+Lamp Controller Service
+53 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2. Control lamp
+✓ Turn on/off/Dimming to lamp controllers.
+
+Control Lamp in Platform Rule
+
+3. Control loop
+✓ Connect circuit and disconnect circuit to gateway.
+
+Controle Loop in Platform Rule
+
+54 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+➢ Execute action device
+✓ Execute action to every sub-rule can only choose the same batch device.
+✓ Select device: associated devices to be operated→lamp selection→select device.
+
+Control Lamps - Select Devices
+✓ Select Group: By default, all devices under this group are selected.
+✓ If the light controller and gateway require selecting specific fixtures and circuits, such as selecting
+the Light Control Group and choosing Fixture 1, Fixture 2 in the top right corner, it means that
+Fixture 1 and Fixture 2 of all devices under this group will execute the action.
+
+Control Lamps - Select Group
+55 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.4.1.2 Examples of Platform Rules Settings
+➢ Configure On/Off Rules for Light Controller
+1. Within the time range of 17:00-18:00, if the light intensity from both light sensors is greater than
+50, turn on the lights.
+2. Turn on the lights at sunset and turn them off at sunrise.
+
+Light Controller Platform Rules
+➢ Configure Open-Close Circuit Rules for the Gateway
+1. Close the circuit at 18:00 and open it at 06:00.
+(figure in next page)
+
+56 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Gateway Platform Rules
+
+2.4.1.3 Local Rules
+Open Rule Management > Run Rules > Local Rules to display the list of all local rules.
+Each local rule can contain multiple sub-rules, with each sub-rule executed independently. Within
+each sub-rule, user can select only one condition and one action.
+
+Local Rules List
+57 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Add Local Rule
+➢ Smart Gateway
+Local rules support four trigger conditions: scheduled trigger, sunrise time, sunset time, and interval
+trigger; and two actions: open circuit and close circuit.
+
+Add Local Rules for the Gateway
+
+58 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+➢ Smart Lighting Control
+✓ Light Controller's local rules support three trigger conditions: scheduled trigger, latitude and
+longitude trigger, and light sensitivity trigger; and three actions: turn on lights, turn off lights, and
+dim lights.
+
+Add Local Rules for the Light Controller
+
+Add Local Rules for Light Controller - Select Devices
+
+59 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+✓ After clicking ‘Save’, a popup window will appear displaying the synchronization results for all
+devices associated with that local rule. Users can use the synchronization results for devices to
+determine whether the local rule was successfully sent to the device end. If synchronization fails,
+the user needs to click ‘Send rules synchronously’ to resend the rules to all devices that failed to
+synchronize, as shown in the figure below.
+
+Local Rule Details - Synchronization Results
+
+2.4.2 Alarm Rules
+2.4.2.1 Platform Alarms
+Access Path: Rule Management > Alarm Rules > Platform Alarms.
+Each platform alarm rule can contain multiple sub-rules, and within each sub-rule, user can combine
+multiple trigger conditions (supporting either triggering when any condition is met or triggering when
+all conditions are met), with only one execution action.
+Please note that the devices triggering the conditions in a single platform alarm rule should be from
+the same batch of devices.
+
+60 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+List of Platform Alarm Rules
+Click on "Add Platform Alarm Rule" to enter the page for adding a new platform alarm rule.
+Enter the rule name, select the product name (for the devices triggering the conditions), choose the
+effective date (the date range when the rule is active), repeat cycle (supporting
+daily/weekly/monthly), effective time (the time range during which alarms will be generated, used
+for alarm filtering, supporting all day, latitude and longitude time range, latitude and longitude time
+range), and add any optional remarks.
+
+Add Platform Alarm Rule
+61 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+➢ Trigger Conditions
+Trigger conditions include attribute triggers, time triggers, time ranges, and online status triggers.
+These conditions can be combined, and actions are executed only when the trigger conditions are
+met.
+1. Attribute Trigger
+✓ Attribute triggering uses property data reported by devices to trigger actions.
+
+Device Attribute Trigger
+2. Event Trigger
+✓ Device events include offline alarm events and device alarm events (the content of device alarm
+events is consistent with the events described in Section 2.4.2.4 Device Alarms).
+
+62 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Event Trigger
+3. Other Triggers
+✓ The online status of devices can also be used as a trigger condition, supporting both online and
+offline states.
+✓ This condition cannot exist on its own and is typically combined with attribute triggers.
+
+Other Triggers
+63 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+➢ Triggering Devices
+Multiple devices can be selected for trigger conditions, but they must all belong to the same product.
+➢ Execution Actions
+Execution actions require a default silent period (which is effective when automatic alarm handling
+is configured). You can choose one alarm level (please refer to Section 2.4.3.2 Alarm Level), input a
+customized alarm name, select whether to send notifications or not, and choose multiple recipient
+groups (please refer to Section 2.4.3.1 Receiving Group Configurations).
+
+Execution Actions
+➢ Automatic Alarm Handling
+Clicking on "Automatic Alarm Handling" will default to displaying one automatic alarm handling
+action after this condition action. When the next set of property values meets the conditions for
+automatic alarm handling, that alarm will be automatically processed without requiring manual
+intervention.
+If a silent period is configured (typically set to 30 minutes for lighting control), then during this silent
+period, if the data meets the conditions for automatic alarm handling, no alarm will be generated. If
+the data does not meet the conditions, the alarm will only be generated after the silent period has
+elapsed.
+
+64 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Atomatic Alarm Handling
+
+2.4.2.2 Example of Platform Alarm Configuration
+The dual-way light controller will generate alarms only between 18:20 and 21:59 in the evening.
+If the active power of Fixture 1 is less than 9 but greater than 0.01, it will trigger a main light power
+low alarm. If the active power returns to above 9 within 20 minutes, no alarm will be generated. If
+the active power returns to above 9, it will automatically handle any previously generated alarms.
+
+Example of Platform Alaram Configuration
+65 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.4.2.3 Offline Alarm
+Access Path: Rule Management > Alarm Rules > Offline Alarms, to display the offline alarm lists for
+all products.
+Offline alarms refer to alarms generated when a device goes offline. Users can customize the device's
+offline time (e.g., set it to 30 minutes, indicating that if no data is received from the device within 30
+minutes, the device's status will be marked as offline). User can choose to enable or disable offline
+alarms, set an effective time (used for alarm filtering), specify a silent period, define an alarm level,
+select recipient groups, and specify devices that should not trigger this alarm.
+Note: Customizing the offline time should not be set too short, as it may result in a large number
+of offline alarms.
+
+Offline Alarm
+
+2.4.2.4 Device Alarms
+Access Path: Rule Management > Alarm Rules > Device Alarms, to display the device alarm lists for
+all products.
+Device alarms are alarm events reported by the devices themselves. Users can choose to enable or
+disable device alarms, set an effective time (used for alarm filtering), specify a silent period, define
+an alarm level, select recipient groups, and specify devices that should not trigger this alarm.
+Setting alarm thresholds are supported, including all single-way and dual-way light controllers.
+66 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Device Alarms
+
+2.4.3 Other Configurations
+The content within 'Other Configurations', is to configure the contents which would be used in
+running rules and alarm rules.
+
+2.4.3.1 Receiving Group Configurations
+Access Path: Rule Management > Other Configurations > Receiving Group Configuration, it displays
+the alarm receiving group, supporting the setting of notification channels, notification intervals, and
+notification times.
+
+Add Receiving Group
+67 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.4.3.2 Alarm Level
+Access Path: Rule Management > Other Configurations > Alarm Level.
+It displays the alarm levels and supports customizing the alarm names.
+
+List of Alarm Levels
+
+2.4.4 Update Rules
+Access Path: Rule Management > Update Rules, where user can configure the data update intervals
+for different products. If this rule is activated, the platform will send read commands at intervals to
+retrieve the latest data from the device.
+
+Update Rule
+68 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.5 Homepage
+2.5.1 Statistical Data Overview
+Open the homepage to display the statistical data for all devices under the selected project. The data
+on this page needs to be configured in 2.3.1.2 Display Information. Different projects can choose
+different numbers of statistical modules based on requirements, with a maximum of eight modules
+displayed at the same time.
+By clicking on the product category in the device overview page, it will be directed to the
+corresponding category's operation and control page, as shown in the figure below.
+
+Device Overview
+
+2.5.2 Operation Control
+2.5.2.1 GIS Map
+Access Path: Homepage > Operation Control > GIS Map, which displays the distribution of devices in
+the project, type, and group on the GIS map (if the environment background chosen when the project
+is created is GIS map). Only devices added to this project/type/group and have latitude and longitude
+will be displayed on the GIS map. Different categories of devices are represented with different icons.
+As shown in the figure below.
+69 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Project - GIS Operation Control-Smart Gateway
+GIS map supports group control for light controllers and gateways.
+- Smart Light Controller supports: Turn on, Turn off, Dimming, Read light data, Read version number,
+Read local time.
+- Gateway supports: Full circuit disconnect, Full circuit connect, Read local time, Read latitude and
+longitude, Group control of the gateway (controls all light controllers under this gateway), Read threephase electricity and Read circuit status (Features of the third-generation gateway).
+As shown in the figure below.
+
+Group Control Features for the Smart Light Controller
+70 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Gateway Group Control Features
+
+2.5.2.2 List of Devices
+2.5.2.2.1 Device List
+Access Path: Homepage > Operation Control > Device List page. It displays the complete device list of
+the project. You can view all devices or individual product types. Click on Operation > View or doubleclick on the device list to enter the device details page. As shown in the figure below.
+
+Project - Operation – Control - Device List
+71 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.5.2.2.2 List of the Details of Devices
+Access Path: Homepage > Operation Control > Device List > Device Details.
+It displays the device details page, comprising 6 major sections:
+Device's historical data: Supports viewing and exporting.
+All rules: Includes platform rules and local rules. It supports reading local rules of individual devices,
+clearing local rules, and synchronizing local rules.
+All alarm information, all operation records, etc. As shown in the figure below.
+
+Device Details Page - Data Overview
+
+Device Details Page - Statistical Analysis
+72 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Supports reading the local rule of a single device, local rules could be cleared if there were unknown
+rules appeared.
+
+Device Details Page - Local Rules-Accessing Local Rules
+
+Device Details Page - Local Rules-List of Local Rules
+
+73 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Supports redownloading local rules to the device end.
+
+Device Details Page - Local Rules-Sync Delivery
+
+2.5.3 Statistical Analysis
+Access Path: Homepage > Statistical Analysis. Select the project. The analysis is only for devices under
+the selected project. It supports column settings for the modules and allows for show/hide operations.
+See samples below.
+
+Statistical Analysis of Projects
+74 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Supports quick report data export. Click on "Export", select the data items you want to export, and
+both single and multiple selections are supported. Then choose the export time range and proceed
+with the export. As shown in the figure below.
+
+Exporting Reports
+Each statistical item can be clicked on to enlarge and view individually. User can quickly view the stats
+by day, week, month, or year. The option to select a time range for report export is available, and the
+export logic remains consistent. As shown in the figure below.
+
+Statistical Analysis - Overview of a single Statistical Analysis
+75 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.5.4 Opention and maintenance
+Access Path: Home > Opention and Maintenance.
+In this page, user can manage the projects/type/groups. It displays the statistics of platform alarm
+information in three dimensions and displays the alarm history, as shown in the figure below.
+
+Project - Operation and Maintenance-Alarm list
+Each alarm can be processed individually. Click the ‘process’, chose one of the status ‘Mark as
+processing’ or ‘Mark as done’.
+Support Batch Processing.;
+Supports filtering of alarm levels, alarm types, and alarm processing status;
+Select the alarm time period and export the required alarm records to an excel table;
+Support batch dispatch of work orders.
+As shown in the figure below.
+
+76 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+Processing Alarms
+
+2.5.5 Rule management
+Access Path: Home page > Rule management.
+View the running status and alarms of each device, and manage devices from three aspects, Project,
+Type, and Group. The displayed list is consistent with 2.4 rule management content. Users can only
+view content and change status, but cannot edit content. As shown in the figure below.
+
+Running Rules - Platform Rules
+
+77 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+Shanghai Shuncom AIOT Co., Ltd
+RULR IoT Platform User Manual
+
+2.5.6 System Log
+Access Path: Home page > System Log.
+It is a system log for devices by project/type/group. User can view the operation records.
+As shown in the figure below.
+
+Systme Log
+
+78 / 78
+Rulr-aiot.com
+
+Version 1.1
+
+
