@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHUNCOM RULR IoT Platform - Knowledge Base</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 3rem 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .section-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .section-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .section-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .section-card li:last-child {
+            border-bottom: none;
+        }
+
+        .section-card a {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-card a:hover {
+            color: #667eea;
+        }
+
+        .section-card a::before {
+            content: "→";
+            margin-right: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.2s, margin-right 0.2s;
+        }
+
+        .section-card a:hover::before {
+            opacity: 1;
+            margin-right: 0.75rem;
+        }
+
+        .quick-links {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .quick-links h2 {
+            margin-bottom: 1rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.2s;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 SHUNCOM RULR IoT Platform</h1>
+            <p>Comprehensive Knowledge Base & Documentation</p>
+        </header>
+
+        <div class="content">
+            <h2>Welcome to the Knowledge Base</h2>
+            <p style="margin: 1rem 0; font-size: 1.1rem;">
+                This knowledge base contains comprehensive documentation for the SHUNCOM RULR IoT Platform,
+                including system architecture, development guides, API references, and best practices.
+            </p>
+
+            <div class="quick-links">
+                <h2>Quick Access</h2>
+                <div class="btn-group">
+                    <a href="SHUNCOM RULR Knowledge Base/README.md" class="btn">📖 Start Here</a>
+                    <a href="SHUNCOM RULR Knowledge Base/Map of Content (MOC).md" class="btn">🗺️ Map of Content</a>
+                    <a href="SHUNCOM RULR IoT Platform User Manual V1.1.pdf" class="btn">📄 User Manual (PDF)</a>
+                    <a href="reports/prd/SHUNCOM-RULR-PRD-Complete.md" class="btn">📋 Complete PRD</a>
+                </div>
+            </div>
+
+            <div class="sections">
+                <div class="section-card">
+                    <h3>📋 Overview</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/01-Overview/01-System Overview.md">System Overview</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/01-Overview/Executive Summary.md">Executive Summary</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/01-Overview/Glossary.md">Glossary</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/01-Overview/Project Scope Summary.md">Project Scope</a></li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h3>🏗️ System Architecture</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/02-System-Architecture/02-Authentication System.md">Authentication System</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/02-System-Architecture/Database Schema.md">Database Schema</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/02-System-Architecture/Deployment Architecture.md">Deployment Architecture</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/02-System-Architecture/Integration Guide.md">Integration Guide</a></li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h3>📱 Device Management</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/03-Device-Management/03-Device Management Hub.md">Device Management Hub</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/03-Device-Management/Device Troubleshooting.md">Device Troubleshooting</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/03-Device-Management/Protocol Guides.md">Protocol Guides</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/Device Types Reference.md">Device Types Reference</a></li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h3>⚙️ Rule Management</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/04-Rule-Management/04-Rule Engine System.md">Rule Engine System</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/04-Rule-Management/Local Rules Best Practices.md">Local Rules Best Practices</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/04-Rule-Management/Rule Configuration Patterns.md">Configuration Patterns</a></li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h3>👥 User Management</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/05-User-Management/05-Project Management.md">Project Management</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/05-User-Management/Permission Matrices.md">Permission Matrices</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/05-User-Management/Role Design Patterns.md">Role Design Patterns</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/05-User-Management/User Onboarding Guide.md">User Onboarding</a></li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h3>📊 Dashboard</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/07-Dashboard/07-Development Roadmap.md">Development Roadmap</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/07-Dashboard/Customization Guide.md">Customization Guide</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/07-Dashboard/Widget Reference.md">Widget Reference</a></li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h3>💻 Development Guide</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/08-Development-Guide/API Design Patterns.md">API Design Patterns</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/08-Development-Guide/API Endpoints Map.md">API Endpoints Map</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/08-Development-Guide/Security Architecture.md">Security Architecture</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/08-Development-Guide/Testing Scenarios.md">Testing Scenarios</a></li>
+                    </ul>
+                </div>
+
+                <div class="section-card">
+                    <h3>📝 Templates & Resources</h3>
+                    <ul>
+                        <li><a href="SHUNCOM RULR Knowledge Base/99-Templates/Device Configuration Template.md">Device Configuration</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/99-Templates/Feature Document Template.md">Feature Document</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/99-Templates/Rule Configuration Template.md">Rule Configuration</a></li>
+                        <li><a href="SHUNCOM RULR Knowledge Base/99-Templates/Troubleshooting Template.md">Troubleshooting</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>SHUNCOM RULR IoT Platform Knowledge Base © 2026</p>
+            <p>Last Updated: January 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
