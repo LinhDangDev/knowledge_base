@@ -19,6 +19,12 @@ status: final
 ## 📊 Role Overview
 
 ### Standard Roles
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TB
     A[Super Admin] --> B[Organization Admin]
@@ -37,6 +43,12 @@ graph TB
     C --- C1
     D --- D1
     E --- E1
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ### Role Hierarchy
@@ -174,6 +186,12 @@ Cannot:
 
 ### Scope Inheritance
 
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TD
     A[Organization] --> B[Project 1]
@@ -185,6 +203,12 @@ graph TD
     F -.->|Inherits| D
     F -.->|Inherits| E
     F -.-x|No Access| C
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ---

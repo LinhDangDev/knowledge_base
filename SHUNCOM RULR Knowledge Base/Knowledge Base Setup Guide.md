@@ -97,6 +97,12 @@ Essential Hotkeys:
 4. **[Feature Requirements Checklist](Feature%20Requirements%20Checklist.md)** - Development progress tracking
 
 ### Navigation Patterns
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph LR
     A[README] --> B[MOC]
@@ -114,6 +120,12 @@ graph LR
     
     E --> L[Implementation Roadmap]
     E --> M[UI Guidelines]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ### Link Structure
@@ -289,6 +301,12 @@ Search Settings:
 ## 📈 Usage Workflows
 
 ### For Developers
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TD
     A[Open README] --> B[Check MOC for Current Task]
@@ -296,18 +314,42 @@ graph TD
     C --> D[Follow Internal Links for Details]
     D --> E[Update Feature Checklist]
     E --> F[Create Implementation Notes]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ### For Project Managers
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TD
     A[Review Feature Requirements Checklist] --> B[Check System Overview]
     B --> C[Assess Development Status]
     C --> D[Plan Sprint Tasks]
     D --> E[Track Progress in Checklist]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ### For Documentation Maintenance
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TD
     A[Weekly Review Schedule] --> B[Check Link Health]
@@ -315,6 +357,12 @@ graph TD
     C --> D[Add New Content]
     D --> E[Verify Tag Consistency]
     E --> F[Update MOC if needed]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ---

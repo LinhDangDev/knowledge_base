@@ -12,6 +12,12 @@
 ## 🏗️ Project Architecture
 
 ### Project Hierarchy
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TB
     A[Organization] --> B[Top-level Projects]
@@ -23,6 +29,12 @@ graph TB
     
     style F fill:#ffcccc
     style G fill:#ffcccc
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 **Navigation**: `Settings > Equipment Management > Device Configuration > Project`
@@ -85,6 +97,12 @@ Optional Fields:
 **Navigation**: `Settings > Equipment Management > Device Configuration > Edit Project > Display Information`
 
 #### 8 Configurable Modules
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph LR
     A[Dashboard] --> B[Module 1: Device Overview]
@@ -95,6 +113,12 @@ graph LR
     A --> G[Module 6: Schedule Display]
     A --> H[Module 7: Performance Metrics]
     A --> I[Module 8: Custom Widget]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ### Style Configuration

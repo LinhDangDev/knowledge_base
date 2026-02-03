@@ -11,6 +11,12 @@
 
 ## 📋 Quick Diagnostic Flowchart
 
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TD
     A[Issue Reported] --> B{What type?}
@@ -40,6 +46,12 @@ graph TD
     G --> G1{Server issue?}
     G1 -->|Yes| G2[Check Resources]
     G1 -->|No| G3[Check Client]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ---

@@ -322,6 +322,12 @@ Device Limits:
 ## 🔧 Configuration Workflow
 
 ### Recommended Setup Order
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TD
     A[1. Create Projects] --> B[2. Create Device Groups]
@@ -333,6 +339,12 @@ graph TD
     G --> H[8. Configure Coordinates]
     H --> I[9. Test Communications]
     I --> J[10. Setup Rules]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ### Verification Checklist

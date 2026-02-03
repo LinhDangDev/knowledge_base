@@ -15,12 +15,24 @@
 ## 🚀 Getting Started Fast Track
 
 ### For New Team Members
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph LR
     A[Start Here] --> B[System Overview]
     B --> C[Device Types Reference]
     C --> D[Development Roadmap]
     D --> E[Begin Implementation]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 1. **[01-System Overview](01-Overview/01-System%20Overview.md)** - Understand the platform architecture
@@ -71,8 +83,8 @@ mindmap
 #### Technical Deep Dives  
 - **[Performance Benchmarks](08-Development-Guide/Performance%20Benchmarks.md)** - System performance requirements
 - **[Security Architecture](08-Development-Guide/Security%20Architecture.md)** - Security implementation details
-- **[[Integration Patterns]]** - Third-party integration guide
-- **[[Scalability Planning]]** - Growth and scaling strategies
+- **[Integration Guide](02-System-Architecture/Integration%20Guide.md)** - Third-party integration guide
+- **[Performance Benchmarks](08-Development-Guide/Performance%20Benchmarks.md)** - Growth and scaling strategies
 
 ### 🔧 Device Management
 #### Quick References
@@ -82,22 +94,22 @@ mindmap
 
 #### Detailed Guides
 - **[03-Device Management Hub](03-Device-Management/03-Device%20Management%20Hub.md)** - Complete device lifecycle
-- **[[Gateway Configuration Guide]]** - Smart gateway setup
-- **[[Light Controller Setup]]** - All controller types
-- **[[Batch Operations Manual]]** - Import/export procedures
+- **[Protocol Guides](03-Device-Management/Protocol%20Guides.md)** - Smart gateway setup
+- **[Device Types Reference](Device%20Types%20Reference.md)** - All controller types
+- **[Device Management Hub](03-Device-Management/03-Device%20Management%20Hub.md)** - Import/export procedures
 
 ### ⚙️ Automation & Rules
 #### Rule System Overview
 - **[04-Rule Engine System](04-Rule-Management/04-Rule%20Engine%20System.md)** - Complete rule system guide
 - **[Rule Configuration Patterns](04-Rule-Management/Rule%20Configuration%20Patterns.md)** - Common automation patterns
-- **[[Alarm Management Guide]]** - Comprehensive alarm handling
+- **[Rule Engine System](04-Rule-Management/04-Rule%20Engine%20System.md)** - Comprehensive alarm handling
 - **[Local Rules Best Practices](04-Rule-Management/Local%20Rules%20Best%20Practices.md)** - Device-level automation
 
 #### Implementation Examples
-- **[[Platform Rules Examples]]** - Real-world automation scenarios
-- **[[Alarm Configuration Examples]]** - Practical alarm setups
-- **[[Rule Testing Procedures]]** - Validation and testing
-- **[[Rule Performance Optimization]]** - Efficiency guidelines
+- **[Rule Configuration Patterns](04-Rule-Management/Rule%20Configuration%20Patterns.md)** - Real-world automation scenarios
+- **[Rule Configuration Patterns](04-Rule-Management/Rule%20Configuration%20Patterns.md)** - Practical alarm setups
+- **[Testing Scenarios](08-Development-Guide/Testing%20Scenarios.md)** - Validation and testing
+- **[Performance Benchmarks](08-Development-Guide/Performance%20Benchmarks.md)** - Efficiency guidelines
 
 ### 👥 User & Project Management
 #### User Management
@@ -117,6 +129,12 @@ mindmap
 ## 🎯 Development Resources
 
 ### 💻 Development Guides
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TB
     A[Development Roadmap] --> B[Phase 1: Core]
@@ -134,6 +152,12 @@ graph TB
     D --> K[Analytics Dashboard]
     D --> L[Performance Optimization]
     D --> M[Advanced Integrations]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 #### Planning & Architecture
@@ -174,6 +198,12 @@ graph TB
 ## 🔗 Cross-Reference Maps
 
 ### Feature Dependencies Map
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```mermaid
 graph TD
     A[Authentication] --> B[Project Management]
@@ -188,6 +218,12 @@ graph TD
     J[GIS Integration] --> K[Device Distribution]
     K --> L[Location-based Rules]
     L --> M[Map Visualization]
+
+    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
+    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
+    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
+    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
+    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
 ```
 
 ### Technology Stack Map
