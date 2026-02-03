@@ -10,7 +10,10 @@ status: final
 
 > RBAC implementation patterns, role hierarchy design, and best practices for access control
 
-**Tags**: #rbac #roles #permissions #user-management #security #access-control
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -586,19 +589,19 @@ Deprecation Process:
 ## 🔗 Related Documentation
 
 ### Permission References
-- **[[Permission Matrices]]** - Detailed permission tables
-- **[[02-Authentication System]]** - Authentication architecture
-- **[[User Onboarding Guide]]** - New user role assignment
+- **[Permission Matrices](Permission%20Matrices.md)** - Detailed permission tables
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)** - Authentication architecture
+- **[User Onboarding Guide](User%20Onboarding%20Guide.md)** - New user role assignment
 
 ### Implementation Guides
-- **[[Security Architecture]]** - Security implementation
-- **[[API Design Patterns]]** - API authorization
-- **[[Testing Scenarios]]** - Role testing procedures
+- **[Security Architecture](../08-Development-Guide/Security%20Architecture.md)** - Security implementation
+- **[API Design Patterns](../08-Development-Guide/API%20Design%20Patterns.md)** - API authorization
+- **[Testing Scenarios](../08-Development-Guide/Testing%20Scenarios.md)** - Role testing procedures
 
 ### Management Guides
-- **[[05-Project Management]]** - Project-level access
-- **[[Troubleshooting Guide]]** - Access troubleshooting
+- **[05-Project Management](05-Project%20Management.md)** - Project-level access
+- **[Troubleshooting Guide](../08-Development-Guide/Troubleshooting%20Guide.md)** - Access troubleshooting
 
 ---
 
-**Next Steps**: Review [[Permission Matrices]] for specific permission details, or see [[User Onboarding Guide]] for assigning roles to new users.
+**Next Steps**: Review [Permission Matrices](Permission%20Matrices.md) for specific permission details, or see [User Onboarding Guide](User%20Onboarding%20Guide.md) for assigning roles to new users.

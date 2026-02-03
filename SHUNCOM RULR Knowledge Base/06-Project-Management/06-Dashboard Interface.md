@@ -2,9 +2,10 @@
 
 > Frontend dashboard features, operation control, và statistical analysis
 
-**Tags**: #dashboard #frontend #ui-interface #real-time-monitoring  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -552,15 +553,15 @@ Adaptations:
 ## 🔗 Related Documentation
 
 ### Technical Implementation
-- **[[UI Component Library]]** - Reusable components
+- **[UI Component Library](../08-Development-Guide/UI%20Component%20Library.md)** - Reusable components
 - **[[Real-time Architecture]]** - WebSocket implementation
 - **[[Performance Optimization]]** - Frontend optimization
 
 ### Feature Integration
-- **[[03-Device Management Hub]]** - Device data source
-- **[[04-Rule Engine System]]** - Rule status display
-- **[[05-Project Management]]** - Project dashboard config
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)** - Device data source
+- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)** - Rule status display
+- **[05-Project Management](../05-User-Management/05-Project%20Management.md)** - Project dashboard config
 
 ---
 
-**Next Steps**: Review [[Feature Requirements Checklist]] for implementation priorities and [[UI Component Library]] for reusable interface elements.
+**Next Steps**: Review [Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md) for implementation priorities and [UI Component Library](../08-Development-Guide/UI%20Component%20Library.md) for reusable interface elements.

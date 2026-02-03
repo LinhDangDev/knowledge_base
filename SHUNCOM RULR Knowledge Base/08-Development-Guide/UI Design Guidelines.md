@@ -10,7 +10,10 @@ status: final
 
 > Design system standards, component guidelines, and UI/UX best practices for the SHUNCOM RULR platform
 
-**Tags**: #design-system #ui-ux #frontend #styling #accessibility #components
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -745,19 +748,19 @@ Notifications:
 ## 🔗 Related Documentation
 
 ### Component Library
-- **[[UI Component Library]]** - Full component catalog
-- **[[Widget Reference]]** - Dashboard widgets
-- **[[Customization Guide]]** - User customization
+- **[UI Component Library](UI%20Component%20Library.md)** - Full component catalog
+- **[Widget Reference](../07-Dashboard/Widget%20Reference.md)** - Dashboard widgets
+- **[Customization Guide](../07-Dashboard/Customization%20Guide.md)** - User customization
 
 ### Implementation
-- **[[06-Dashboard Interface]]** - Dashboard implementation
+- **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)** - Dashboard implementation
 - **[[Frontend Development Guide]]** - Development setup
-- **[[Testing Scenarios]]** - UI testing
+- **[Testing Scenarios](Testing%20Scenarios.md)** - UI testing
 
 ### Standards
 - **[[Accessibility Checklist]]** - WCAG compliance
-- **[[Performance Benchmarks]]** - UI performance targets
+- **[Performance Benchmarks](Performance%20Benchmarks.md)** - UI performance targets
 
 ---
 
-**Next Steps**: Review [[UI Component Library]] for specific component implementations, or see [[Widget Reference]] for dashboard-specific components.
+**Next Steps**: Review [UI Component Library](UI%20Component%20Library.md) for specific component implementations, or see [Widget Reference](../07-Dashboard/Widget%20Reference.md) for dashboard-specific components.

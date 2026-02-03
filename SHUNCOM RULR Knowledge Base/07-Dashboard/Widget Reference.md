@@ -10,7 +10,10 @@ status: final
 
 > Complete reference for all dashboard widgets including configuration options, data sources, and customization
 
-**Tags**: #dashboard #widgets #ui-components #visualization #real-time
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -722,17 +725,17 @@ Adaptation:
 ## 🔗 Related Documentation
 
 ### Dashboard Configuration
-- **[[Customization Guide]]** - Full dashboard customization
-- **[[06-Dashboard Interface]]** - Dashboard interface overview
+- **[Customization Guide](Customization%20Guide.md)** - Full dashboard customization
+- **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)** - Dashboard interface overview
 
 ### Data Sources
-- **[[API Endpoints Map]]** - Widget data endpoints
+- **[API Endpoints Map](../02-System-Architecture/API%20Endpoints%20Map.md)** - Widget data endpoints
 - **[[Real-time Architecture]]** - WebSocket implementation
 
 ### Development
-- **[[UI Component Library]]** - Component reference
-- **[[UI Design Guidelines]]** - Design standards
+- **[UI Component Library](../08-Development-Guide/UI%20Component%20Library.md)** - Component reference
+- **[UI Design Guidelines](../08-Development-Guide/UI%20Design%20Guidelines.md)** - Design standards
 
 ---
 
-**Next Steps**: See [[Customization Guide]] for arranging widgets on your dashboard, or [[06-Dashboard Interface]] for the complete dashboard system overview.
+**Next Steps**: See [Customization Guide](Customization%20Guide.md) for arranging widgets on your dashboard, or [06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md) for the complete dashboard system overview.

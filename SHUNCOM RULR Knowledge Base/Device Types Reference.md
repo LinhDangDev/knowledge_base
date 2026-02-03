@@ -2,9 +2,10 @@
 
 > Quick reference guide for all 7 supported IoT device categories
 
-**Tags**: #device-reference #quick-reference #iot-devices #configuration  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -356,10 +357,10 @@ Communication Verified:
 ## 🔗 Quick Navigation Links
 
 ### Related Documentation
-- **[[03-Device Management Hub]]** - Complete device management guide
-- **[[04-Rule Engine System]]** - Device automation setup
-- **[[05-Project Management]]** - Project structure for devices
-- **[[06-Dashboard Interface]]** - Device monitoring and control
+- **[03-Device Management Hub](03-Device-Management/03-Device%20Management%20Hub.md)** - Complete device management guide
+- **[04-Rule Engine System](04-Rule-Management/04-Rule%20Engine%20System.md)** - Device automation setup
+- **[05-Project Management](05-User-Management/05-Project%20Management.md)** - Project structure for devices
+- **[06-Dashboard Interface](06-Project-Management/06-Dashboard%20Interface.md)** - Device monitoring and control
 
 ### Configuration Workflows
 - **[[Device Registration Flow]]** - Step-by-step device setup
@@ -369,4 +370,4 @@ Communication Verified:
 
 ---
 
-**Quick Start**: Begin with [[05-Project Management]] to establish structure, then return to [[03-Device Management Hub]] for detailed device configuration procedures.
+**Quick Start**: Begin with [05-Project Management](05-User-Management/05-Project%20Management.md) to establish structure, then return to [03-Device Management Hub](03-Device-Management/03-Device%20Management%20Hub.md) for detailed device configuration procedures.

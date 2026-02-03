@@ -2,9 +2,10 @@
 
 > Common issues and solutions for SHUNCOM RULR IoT Platform
 
-**Tags**: #troubleshooting #support #operations #quick-reference  
-**Created**: 2025-01-23  
-**Last Updated**: 2025-01-23
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -549,15 +550,15 @@ Actions:
 ## 🔗 Quick Reference Links
 
 ### Related Documentation
-- **[[03-Device Management Hub]]**: Device configuration details
-- **[[04-Rule Engine System]]**: Rule configuration
-- **[[02-Authentication System]]**: User management
-- **[[06-Dashboard Interface]]**: Dashboard features
-- **[[Performance Benchmarks]]**: Expected performance
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)**: Device configuration details
+- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)**: Rule configuration
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: User management
+- **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)**: Dashboard features
+- **[Performance Benchmarks](Performance%20Benchmarks.md)**: Expected performance
 
 ### Templates
-- **[[Troubleshooting Template]]**: Document new issues
-- **[[Device Configuration Template]]**: Device setup reference
+- **[Troubleshooting Template](../99-Templates/Troubleshooting%20Template.md)**: Document new issues
+- **[Device Configuration Template](../99-Templates/Device%20Configuration%20Template.md)**: Device setup reference
 
 ---
 

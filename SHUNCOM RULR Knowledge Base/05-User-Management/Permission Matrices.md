@@ -10,6 +10,10 @@ status: final
 
 > Comprehensive permission mappings for SHUNCOM RULR role-based access control
 
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 ---
 
 ## 📊 Role Overview
@@ -384,7 +388,7 @@ Recommendations:
 
 ## 🔗 Related Documentation
 
-- **[[02-Authentication System]]**: User authentication
-- **[[Security Architecture]]**: Security implementation
-- **[[Role Design Patterns]]**: Role configuration patterns
-- **[[User Onboarding Guide]]**: New user setup
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: User authentication
+- **[Security Architecture](../08-Development-Guide/Security%20Architecture.md)**: Security implementation
+- **[Role Design Patterns](Role%20Design%20Patterns.md)**: Role configuration patterns
+- **[User Onboarding Guide](User%20Onboarding%20Guide.md)**: New user setup

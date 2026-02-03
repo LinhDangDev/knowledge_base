@@ -10,6 +10,10 @@ status: final
 
 > Step-by-step guide for adding and configuring new users in SHUNCOM RULR
 
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 ---
 
 ## 📋 Onboarding Checklist
@@ -370,7 +374,7 @@ When User Leaves:
 
 ## 🔗 Related Documentation
 
-- **[[02-Authentication System]]**: Authentication details
-- **[[Permission Matrices]]**: Permission reference
-- **[[Role Design Patterns]]**: Role configuration
-- **[[Security Architecture]]**: Security policies
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Authentication details
+- **[Permission Matrices](Permission%20Matrices.md)**: Permission reference
+- **[Role Design Patterns](Role%20Design%20Patterns.md)**: Role configuration
+- **[Security Architecture](../08-Development-Guide/Security%20Architecture.md)**: Security policies

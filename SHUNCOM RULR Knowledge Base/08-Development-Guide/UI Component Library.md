@@ -2,9 +2,10 @@
 
 > Reusable UI components for SHUNCOM RULR IoT Platform frontend development
 
-**Tags**: #ui-components #frontend #design-system #development-guide  
-**Created**: 2025-01-23  
-**Last Updated**: 2025-01-23
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -627,13 +628,13 @@ Modal Notifications:
 ## 🔗 Related Documentation
 
 ### Dependencies
-- **[[07-Development Roadmap]]**: Implementation timeline
-- **[[06-Dashboard Interface]]**: Dashboard requirements
-- **[[API Design Patterns]]**: Data integration patterns
+- **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: Implementation timeline
+- **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)**: Dashboard requirements
+- **[API Design Patterns](API%20Design%20Patterns.md)**: Data integration patterns
 
 ### Usage Guides
-- **[[Feature Requirements Checklist]]**: Feature tracking
-- **[[Testing Scenarios]]**: Component testing
+- **[Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md)**: Feature tracking
+- **[Testing Scenarios](Testing%20Scenarios.md)**: Component testing
 
 ---
 

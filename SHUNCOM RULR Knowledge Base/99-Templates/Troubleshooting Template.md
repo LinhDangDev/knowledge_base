@@ -2,9 +2,10 @@
 
 > Template for documenting and resolving common issues in SHUNCOM RULR IoT Platform
 
-**Tags**: #template #troubleshooting #support #documentation  
-**Created**: {{date}}  
-**Last Updated**: {{date}}
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 

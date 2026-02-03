@@ -10,7 +10,10 @@ status: final
 
 > Complete project overview including objectives, scope, stakeholders, and success criteria for the SHUNCOM RULR IoT Platform
 
-**Tags**: #overview #scope #project-management #requirements #stakeholders
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -380,10 +383,10 @@ Regulatory Constraints:
 
 ### Internal Documents
 
-- **[[01-System Overview]]** - Technical architecture
-- **[[07-Development Roadmap]]** - Implementation timeline
-- **[[Feature Requirements Checklist]]** - Detailed requirements
-- **[[Device Types Reference]]** - Device specifications
+- **[01-System Overview](01-System%20Overview.md)** - Technical architecture
+- **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)** - Implementation timeline
+- **[Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md)** - Detailed requirements
+- **[Device Types Reference](../Device%20Types%20Reference.md)** - Device specifications
 
 ### Standards & Compliance
 
@@ -413,4 +416,4 @@ Approval:
 
 ---
 
-**Next Steps**: Review [[01-System Overview]] for technical architecture details, or see [[07-Development Roadmap]] for implementation timeline.
+**Next Steps**: Review [01-System Overview](01-System%20Overview.md) for technical architecture details, or see [07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md) for implementation timeline.

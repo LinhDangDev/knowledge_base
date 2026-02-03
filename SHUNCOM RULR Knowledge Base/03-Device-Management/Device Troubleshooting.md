@@ -10,6 +10,10 @@ status: final
 
 > Detailed troubleshooting procedures for all device types in SHUNCOM RULR
 
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 ---
 
 ## 📋 Quick Diagnosis Matrix
@@ -594,7 +598,7 @@ Troubleshooting SIM:
 
 ## 🔗 Related Documentation
 
-- **[[03-Device Management Hub]]**: Device configuration
-- **[[Device Types Reference]]**: Device specifications
-- **[[Troubleshooting Guide]]**: General troubleshooting
-- **[[Glossary]]**: Technical terms
+- **[03-Device Management Hub](03-Device%20Management%20Hub.md)**: Device configuration
+- **[Device Types Reference](../Device%20Types%20Reference.md)**: Device specifications
+- **[Troubleshooting Guide](../08-Development-Guide/Troubleshooting%20Guide.md)**: General troubleshooting
+- **[Glossary](../01-Overview/Glossary.md)**: Technical terms

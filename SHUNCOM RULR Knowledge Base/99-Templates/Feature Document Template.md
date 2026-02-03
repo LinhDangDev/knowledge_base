@@ -2,9 +2,10 @@
 
 > Template for documenting feature requirements and specifications
 
-**Tags**: #template #feature-documentation #requirements  
-**Created**: {{date}}  
-**Last Updated**: {{date}}
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 

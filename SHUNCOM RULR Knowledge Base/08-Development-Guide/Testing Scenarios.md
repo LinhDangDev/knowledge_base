@@ -2,9 +2,10 @@
 
 > Comprehensive test cases for SHUNCOM RULR IoT Platform quality assurance
 
-**Tags**: #testing #qa #development-guide #test-cases  
-**Created**: 2025-01-23  
-**Last Updated**: 2025-01-23
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -728,13 +729,13 @@ TC-SEC-005:
 ## 🔗 Related Documentation
 
 ### Test Implementation
-- **[[07-Development Roadmap]]**: Testing phase timeline
-- **[[API Design Patterns]]**: API testing reference
-- **[[Database Schema]]**: Data for test fixtures
+- **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: Testing phase timeline
+- **[API Design Patterns](API%20Design%20Patterns.md)**: API testing reference
+- **[Database Schema](../02-System-Architecture/Database%20Schema.md)**: Data for test fixtures
 
 ### Quality Standards
-- **[[Performance Benchmarks]]**: Performance requirements
-- **[[Feature Requirements Checklist]]**: Feature coverage tracking
+- **[Performance Benchmarks](Performance%20Benchmarks.md)**: Performance requirements
+- **[Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md)**: Feature coverage tracking
 
 ---
 

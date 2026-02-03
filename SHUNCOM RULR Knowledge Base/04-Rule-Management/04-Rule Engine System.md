@@ -2,9 +2,10 @@
 
 > Comprehensive automation system with Platform Rules, Local Rules, and Alarm Rules
 
-**Tags**: #rule-engine #automation #alarms #platform-rules #local-rules  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -767,10 +768,10 @@ Recovery Mechanisms:
 ## 🔗 Integration & Dependencies
 
 ### System Integrations
-1. **[[03-Device Management Hub]]**: Rule target devices
-2. **[[05-Project Management]]**: Project-scoped rules
-3. **[[02-Authentication System]]**: Rule management permissions
-4. **[[06-Dashboard Interface]]**: Rule status visualization
+1. **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)**: Rule target devices
+2. **[05-Project Management](../05-User-Management/05-Project%20Management.md)**: Project-scoped rules
+3. **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Rule management permissions
+4. **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)**: Rule status visualization
 
 ### Data Dependencies
 ```yaml
@@ -789,4 +790,4 @@ Rule Execution Dependencies:
 
 ---
 
-**Next Steps**: Configure [[03-Device Management Hub]] devices before creating rules, ensure [[05-Project Management]] structure is established for proper rule scoping.
+**Next Steps**: Configure [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md) devices before creating rules, ensure [05-Project Management](../05-User-Management/05-Project%20Management.md) structure is established for proper rule scoping.

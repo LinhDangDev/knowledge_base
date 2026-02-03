@@ -2,9 +2,13 @@
 
 > Central navigation hub for SHUNCOM RULR IoT Platform Knowledge Base
 
-**Tags**: #moc #navigation #knowledge-base #central-hub  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 22, 2025
+{% endhint %}
 
 ---
 
@@ -19,17 +23,17 @@ graph LR
     D --> E[Begin Implementation]
 ```
 
-1. **[[01-System Overview]]** - Understand the platform architecture
-2. **[[Device Types Reference]]** - Learn supported devices  
-3. **[[07-Development Roadmap]]** - See implementation plan
-4. **[[Feature Requirements Checklist]]** - Track development progress
+1. **[01-System Overview](01-Overview/01-System%20Overview.md)** - Understand the platform architecture
+2. **[Device Types Reference](Device%20Types%20Reference.md)** - Learn supported devices  
+3. **[07-Development Roadmap](07-Dashboard/07-Development%20Roadmap.md)** - See implementation plan
+4. **[Feature Requirements Checklist](Feature%20Requirements%20Checklist.md)** - Track development progress
 
 ### For Project Managers
-1. **[[Project Scope Summary]]** - Complete project overview
-2. **[[Performance Benchmarks]]** - System requirements
-3. **[[Testing Scenarios]]** - QA planning
-4. **[[UI Design Guidelines]]** - Design standards
-5. **[[Feature Requirements Checklist]]** - Track development progress
+1. **[Project Scope Summary](01-Overview/Project%20Scope%20Summary.md)** - Complete project overview
+2. **[Performance Benchmarks](08-Development-Guide/Performance%20Benchmarks.md)** - System requirements
+3. **[Testing Scenarios](08-Development-Guide/Testing%20Scenarios.md)** - QA planning
+4. **[UI Design Guidelines](08-Development-Guide/UI%20Design%20Guidelines.md)** - Design standards
+5. **[Feature Requirements Checklist](Feature%20Requirements%20Checklist.md)** - Track development progress
 
 ---
 
@@ -59,35 +63,35 @@ mindmap
 ```
 
 #### Foundation Documents
-- **[[01-System Overview]]** - Complete architectural overview
-- **[[02-Authentication System]]** - User management and security
-- **[[API Endpoints Map]]** - System integration points
-- **[[Database Schema]]** - Data model relationships
+- **[01-System Overview](01-Overview/01-System%20Overview.md)** - Complete architectural overview
+- **[02-Authentication System](02-System-Architecture/02-Authentication%20System.md)** - User management and security
+- **[API Endpoints Map](02-System-Architecture/API%20Endpoints%20Map.md)** - System integration points
+- **[Database Schema](02-System-Architecture/Database%20Schema.md)** - Data model relationships
 
 #### Technical Deep Dives  
-- **[[Performance Benchmarks]]** - System performance requirements
-- **[[Security Architecture]]** - Security implementation details
+- **[Performance Benchmarks](08-Development-Guide/Performance%20Benchmarks.md)** - System performance requirements
+- **[Security Architecture](08-Development-Guide/Security%20Architecture.md)** - Security implementation details
 - **[[Integration Patterns]]** - Third-party integration guide
 - **[[Scalability Planning]]** - Growth and scaling strategies
 
 ### 🔧 Device Management
 #### Quick References
-- **[[Device Types Reference]]** - 7 device categories overview
-- **[[Device Troubleshooting]]** - Common problems and solutions
-- **[[Protocol Guides]]** - Zigbee, LoRa, NB-IoT, CAT.1, MQTT
+- **[Device Types Reference](Device%20Types%20Reference.md)** - 7 device categories overview
+- **[Device Troubleshooting](03-Device-Management/Device%20Troubleshooting.md)** - Common problems and solutions
+- **[Protocol Guides](03-Device-Management/Protocol%20Guides.md)** - Zigbee, LoRa, NB-IoT, CAT.1, MQTT
 
 #### Detailed Guides
-- **[[03-Device Management Hub]]** - Complete device lifecycle
+- **[03-Device Management Hub](03-Device-Management/03-Device%20Management%20Hub.md)** - Complete device lifecycle
 - **[[Gateway Configuration Guide]]** - Smart gateway setup
 - **[[Light Controller Setup]]** - All controller types
 - **[[Batch Operations Manual]]** - Import/export procedures
 
 ### ⚙️ Automation & Rules
 #### Rule System Overview
-- **[[04-Rule Engine System]]** - Complete rule system guide
-- **[[Rule Configuration Patterns]]** - Common automation patterns
+- **[04-Rule Engine System](04-Rule-Management/04-Rule%20Engine%20System.md)** - Complete rule system guide
+- **[Rule Configuration Patterns](04-Rule-Management/Rule%20Configuration%20Patterns.md)** - Common automation patterns
 - **[[Alarm Management Guide]]** - Comprehensive alarm handling
-- **[[Local Rules Best Practices]]** - Device-level automation
+- **[Local Rules Best Practices](04-Rule-Management/Local%20Rules%20Best%20Practices.md)** - Device-level automation
 
 #### Implementation Examples
 - **[[Platform Rules Examples]]** - Real-world automation scenarios
@@ -97,15 +101,15 @@ mindmap
 
 ### 👥 User & Project Management
 #### User Management
-- **[[02-Authentication System]]** - User lifecycle management
-- **[[Role Design Patterns]]** - RBAC implementation
-- **[[Permission Matrices]]** - Access control mapping
-- **[[User Onboarding Guide]]** - New user procedures
+- **[02-Authentication System](02-System-Architecture/02-Authentication%20System.md)** - User lifecycle management
+- **[Role Design Patterns](05-User-Management/Role%20Design%20Patterns.md)** - RBAC implementation
+- **[Permission Matrices](05-User-Management/Permission%20Matrices.md)** - Access control mapping
+- **[User Onboarding Guide](05-User-Management/User%20Onboarding%20Guide.md)** - New user procedures
 
 #### Project Structure
-- **[[05-Project Management]]** - Project hierarchy design
-- **[[GIS Setup Guide]]** - Map and location features
-- **[[Customization Guide]]** - Custom dashboard setup
+- **[05-Project Management](05-User-Management/05-Project%20Management.md)** - Project hierarchy design
+- **[GIS Setup Guide](06-Project-Management/GIS%20Setup%20Guide.md)** - Map and location features
+- **[Customization Guide](07-Dashboard/Customization%20Guide.md)** - Custom dashboard setup
 - **[[Multi-tenant Architecture]]** - Organization isolation
 
 ---
@@ -133,28 +137,28 @@ graph TB
 ```
 
 #### Planning & Architecture
-- **[[07-Development Roadmap]]** - Complete implementation timeline
-- **[[Feature Requirements Checklist]]** - Development tracking
+- **[07-Development Roadmap](07-Dashboard/07-Development%20Roadmap.md)** - Complete implementation timeline
+- **[Feature Requirements Checklist](Feature%20Requirements%20Checklist.md)** - Development tracking
 - **[[Technical Debt Management]]** - Code quality maintenance
 - **[[Architecture Decision Records]]** - Design decision history
 
 #### Frontend Development  
-- **[[UI Component Library]]** - Reusable UI components
-- **[[06-Dashboard Interface]]** - Frontend implementation guide
-- **[[UI Design Guidelines]]** - Design system standards
-- **[[Widget Reference]]** - Dashboard widget catalog
-- **[[Customization Guide]]** - Dashboard customization
+- **[UI Component Library](08-Development-Guide/UI%20Component%20Library.md)** - Reusable UI components
+- **[06-Dashboard Interface](06-Project-Management/06-Dashboard%20Interface.md)** - Frontend implementation guide
+- **[UI Design Guidelines](08-Development-Guide/UI%20Design%20Guidelines.md)** - Design system standards
+- **[Widget Reference](07-Dashboard/Widget%20Reference.md)** - Dashboard widget catalog
+- **[Customization Guide](07-Dashboard/Customization%20Guide.md)** - Dashboard customization
 - **[[Responsive Design Patterns]]** - Multi-device support
 
 #### Backend Development
-- **[[API Design Patterns]]** - RESTful API standards
+- **[API Design Patterns](08-Development-Guide/API%20Design%20Patterns.md)** - RESTful API standards
 - **[[Database Design Guide]]** - Data model implementation
 - **[[Real-time Architecture]]** - WebSocket implementation
 - **[[Microservices Patterns]]** - Service architecture
 
 ### 🧪 Quality Assurance
 #### Testing Framework
-- **[[Testing Scenarios]]** - Comprehensive test cases
+- **[Testing Scenarios](08-Development-Guide/Testing%20Scenarios.md)** - Comprehensive test cases
 - **[[Automated Testing Guide]]** - CI/CD integration
 - **[[Performance Testing]]** - Load and stress testing
 - **[[Security Testing]]** - Vulnerability assessment

@@ -2,9 +2,10 @@
 
 > Comprehensive API reference for SHUNCOM RULR IoT Platform
 
-**Tags**: #backend-api #rest-api #api-documentation #integration
-**Created**: 2025-01-26
-**Last Updated**: 2025-01-26
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 **API Version**: v1.0
 **Base URL**: `https://rulr-aiot.com/api/v1`
 
@@ -1186,15 +1187,14 @@ X-RateLimit-Reset: 1706270400
 
 ## 📚 Related Documentation
 
-- [[Database Schema]] - Database structure and relationships
-- [[02-Authentication System]] - Authentication flow details
-- [[03-Device Management Hub]] - Device management workflows
-- [[04-Rule Engine System]] - Rule engine implementation
-- [[API Design Patterns]] - RESTful API best practices
-- [[Security Architecture]] - Security implementation details
+- [Database Schema](Database%20Schema.md) - Database structure and relationships
+- [02-Authentication System](02-Authentication%20System.md) - Authentication flow details
+- [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md) - Device management workflows
+- [04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md) - Rule engine implementation
+- [API Design Patterns](../08-Development-Guide/API%20Design%20Patterns.md) - RESTful API best practices
+- [Security Architecture](../08-Development-Guide/Security%20Architecture.md) - Security implementation details
 
 ---
 
-**Last Updated**: 2025-01-26
 **API Version**: v1.0
 **Maintained by**: Backend Development Team

@@ -10,6 +10,10 @@ status: final
 
 > Definitions of technical terms and acronyms used in SHUNCOM RULR IoT Platform
 
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 ---
 
 ## A
@@ -24,7 +28,7 @@ Total electrical energy consumed by a device, measured in kWh (kilowatt-hours).
 Real power consumed by a device at any moment, measured in Watts (W).
 
 ### Alarm Rule
-Rule type that monitors device conditions and generates alerts when thresholds are exceeded. See [[04-Rule Engine System]].
+Rule type that monitors device conditions and generates alerts when thresholds are exceeded. See [04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md).
 
 ### APPEUI (Application EUI)
 8-byte unique identifier for LoRa application. Used in OTAA join process.
@@ -252,7 +256,7 @@ Temporary storage for deleted devices. Allows recovery of basic configuration (h
 Named collection of permissions assigned to users (e.g., Admin, Operator, Viewer).
 
 ### Rule
-Automation definition consisting of triggers, conditions, and actions. See [[04-Rule Engine System]].
+Automation definition consisting of triggers, conditions, and actions. See [04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md).
 
 ---
 
@@ -354,7 +358,7 @@ Organization
 
 ## 🔗 Related Documents
 
-- **[[01-System Overview]]**: System architecture
-- **[[03-Device Management Hub]]**: Device details
-- **[[04-Rule Engine System]]**: Rule configuration
-- **[[Device Types Reference]]**: Device specifications
+- **[01-System Overview](01-System%20Overview.md)**: System architecture
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)**: Device details
+- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)**: Rule configuration
+- **[Device Types Reference](../Device%20Types%20Reference.md)**: Device specifications

@@ -2,9 +2,10 @@
 
 > Complete reference of all API endpoints for SHUNCOM RULR IoT Platform
 
-**Tags**: #api #endpoints #backend #quick-reference  
-**Created**: 2025-01-23  
-**Last Updated**: 2025-01-23
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -390,9 +391,9 @@ GET /dashboard/statistics?projectId=uuid:
 
 ## 🔗 Related Documentation
 
-- **[[API Design Patterns]]**: API standards and conventions
-- **[[02-Authentication System]]**: Authentication details
-- **[[Database Schema]]**: Data models
+- **[API Design Patterns](API%20Design%20Patterns.md)**: API standards and conventions
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Authentication details
+- **[Database Schema](../02-System-Architecture/Database%20Schema.md)**: Data models
 
 ---
 

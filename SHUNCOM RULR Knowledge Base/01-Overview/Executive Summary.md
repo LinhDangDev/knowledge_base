@@ -1,14 +1,14 @@
----
-title: Executive Summary
-tags: [overview, summary, shuncom-rulr, quick-reference]
-created: 2025-01-23
-updated: 2025-01-23
-status: final
----
-
 # 📊 Executive Summary
 
 > High-level overview of SHUNCOM RULR IoT Platform for stakeholders and decision-makers
+
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 23, 2025
+{% endhint %}
 
 ---
 
@@ -175,10 +175,10 @@ gantt
 
 ## 🔗 Related Documents
 
-- **[[01-System Overview]]**: Detailed technical architecture
-- **[[07-Development Roadmap]]**: Implementation timeline
-- **[[Feature Requirements Checklist]]**: Feature tracking
-- **[[Performance Benchmarks]]**: Technical specifications
+- **[01-System Overview](01-System%20Overview.md)**: Detailed technical architecture
+- **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: Implementation timeline
+- **[Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md)**: Feature tracking
+- **[Performance Benchmarks](../08-Development-Guide/Performance%20Benchmarks.md)**: Technical specifications
 
 ---
 

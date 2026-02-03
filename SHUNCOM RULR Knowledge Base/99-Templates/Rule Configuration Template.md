@@ -2,9 +2,10 @@
 
 > Template for documenting automation rules in SHUNCOM RULR IoT Platform
 
-**Tags**: #template #rule-configuration #automation #documentation  
-**Created**: {{date}}  
-**Last Updated**: {{date}}
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -272,7 +273,7 @@ Notes: {{test_notes}}
 
 ## 🔗 Related Documentation
 
-- **[[04-Rule Engine System]]**: Rule system overview
-- **[[Rule Configuration Patterns]]**: Common rule patterns
-- **[[Testing Scenarios]]**: Rule testing procedures
-- **[[Troubleshooting Guide]]**: Rule execution issues
+- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)**: Rule system overview
+- **[Rule Configuration Patterns](../04-Rule-Management/Rule%20Configuration%20Patterns.md)**: Common rule patterns
+- **[Testing Scenarios](../08-Development-Guide/Testing%20Scenarios.md)**: Rule testing procedures
+- **[Troubleshooting Guide](../08-Development-Guide/Troubleshooting%20Guide.md)**: Rule execution issues

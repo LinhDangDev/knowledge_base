@@ -2,9 +2,10 @@
 
 > Complete data model and relationships for SHUNCOM RULR IoT Platform
 
-**Tags**: #database-schema #data-model #backend-api #system-architecture
-**Created**: 2025-01-26
-**Last Updated**: 2025-01-26
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 **Database**: PostgreSQL 14+
 **ORM**: Prisma/TypeORM (TBD)
 
@@ -857,14 +858,13 @@ COMMIT;
 
 ## 📚 Related Documentation
 
-- [[API Endpoints Map]] - API specifications using this schema
-- [[02-Authentication System]] - User authentication implementation
-- [[03-Device Management Hub]] - Device data model details
-- [[Performance Benchmarks]] - Database performance targets
-- [[Security Architecture]] - Data security and encryption
+- [API Endpoints Map](API%20Endpoints%20Map.md) - API specifications using this schema
+- [02-Authentication System](02-Authentication%20System.md) - User authentication implementation
+- [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md) - Device data model details
+- [Performance Benchmarks](../08-Development-Guide/Performance%20Benchmarks.md) - Database performance targets
+- [Security Architecture](../08-Development-Guide/Security%20Architecture.md) - Data security and encryption
 
 ---
 
-**Last Updated**: 2025-01-26
 **Database Version**: v1.0
 **Maintained by**: Backend Development Team

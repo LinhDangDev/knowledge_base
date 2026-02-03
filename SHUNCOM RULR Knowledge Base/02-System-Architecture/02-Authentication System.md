@@ -2,9 +2,10 @@
 
 > User management, roles, permissions and organizational structure
 
-**Tags**: #user-management #authentication #rbac #permissions  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -266,9 +267,9 @@ Role Design Strategy:
 - [[Security Audit Procedures]] - Regular security reviews
 
 ### Integration Points
-- [[05-Project Management]] - Project-user associations
-- [[03-Device Management Hub]] - Device access control
-- [[04-Rule Engine System]] - Rule execution permissions
+- [05-Project Management](../05-User-Management/05-Project%20Management.md) - Project-user associations
+- [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md) - Device access control
+- [04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md) - Rule execution permissions
 
 ---
 
@@ -297,4 +298,4 @@ New User (Default):
 
 ---
 
-**Next Steps**: Configure [[05-Project Management]] structure before assigning management scopes to users.
+**Next Steps**: Configure [05-Project Management](../05-User-Management/05-Project%20Management.md) structure before assigning management scopes to users.

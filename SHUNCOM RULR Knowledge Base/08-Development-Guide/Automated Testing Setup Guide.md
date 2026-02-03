@@ -2,9 +2,10 @@
 
 > Complete guide for setting up automated testing infrastructure for SHUNCOM RULR IoT Platform
 
-**Tags**: #testing #automation #ci-cd #jest #cypress #playwright #quality-assurance
-**Created**: 2025-01-26
-**Last Updated**: 2025-01-26
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 **Prerequisites**: Node.js 18+, npm/yarn, Docker (optional)
 
 ---

@@ -2,9 +2,10 @@
 
 > Complete setup instructions for the SHUNCOM RULR IoT Platform Obsidian Knowledge Base
 
-**Tags**: #setup-guide #obsidian #knowledge-base #installation  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -90,10 +91,10 @@ Essential Hotkeys:
 ## 🗺️ Navigation Guide
 
 ### Starting Points
-1. **[[README]]** - Main hub với quick navigation
-2. **[[Map of Content (MOC)]]** - Comprehensive navigation map  
-3. **[[Device Types Reference]]** - Quick lookup for device info
-4. **[[Feature Requirements Checklist]]** - Development progress tracking
+1. **[README](README.md)** - Main hub với quick navigation
+2. **[Map of Content (MOC)](Map%20of%20Content%20(MOC).md)** - Comprehensive navigation map  
+3. **[Device Types Reference](Device%20Types%20Reference.md)** - Quick lookup for device info
+4. **[Feature Requirements Checklist](Feature%20Requirements%20Checklist.md)** - Development progress tracking
 
 ### Navigation Patterns
 ```mermaid
@@ -171,12 +172,12 @@ Tag Queries (using Dataview plugin):
 ## 📊 Knowledge Base Features
 
 ### Core Documents Included
-1. **[[01-System Overview]]** - Complete architectural overview
-2. **[[02-Authentication System]]** - User management, RBAC, permissions
-3. **[[03-Device Management Hub]]** - All 7 device types, lifecycle management
-4. **[[04-Rule Engine System]]** - Platform Rules, Local Rules, Alarm Rules
-5. **[[Device Types Reference]]** - Quick reference for all supported devices
-6. **[[Feature Requirements Checklist]]** - Comprehensive development checklist
+1. **[01-System Overview](01-Overview/01-System%20Overview.md)** - Complete architectural overview
+2. **[02-Authentication System](02-System-Architecture/02-Authentication%20System.md)** - User management, RBAC, permissions
+3. **[03-Device Management Hub](03-Device-Management/03-Device%20Management%20Hub.md)** - All 7 device types, lifecycle management
+4. **[04-Rule Engine System](04-Rule-Management/04-Rule%20Engine%20System.md)** - Platform Rules, Local Rules, Alarm Rules
+5. **[Device Types Reference](Device%20Types%20Reference.md)** - Quick reference for all supported devices
+6. **[Feature Requirements Checklist](Feature%20Requirements%20Checklist.md)** - Comprehensive development checklist
 
 ### Key Features per Document
 ```yaml
@@ -373,10 +374,10 @@ Version Control:
 - [ ] Backlinks panel functional
 
 ### Test Navigation
-1. Open **[[README]]** - verify main navigation works
-2. Click through to **[[Map of Content (MOC)]]** - check comprehensive navigation
-3. Test **[[Device Types Reference]]** - verify quick reference functionality
-4. Open **[[Feature Requirements Checklist]]** - confirm checklist display
+1. Open **[README](README.md)** - verify main navigation works
+2. Click through to **[Map of Content (MOC)](Map%20of%20Content%20(MOC).md)** - check comprehensive navigation
+3. Test **[Device Types Reference](Device%20Types%20Reference.md)** - verify quick reference functionality
+4. Open **[Feature Requirements Checklist](Feature%20Requirements%20Checklist.md)** - confirm checklist display
 5. Navigate between documents using internal links
 6. Test search functionality with tags and content
 7. Verify graph view shows document relationships
@@ -410,4 +411,4 @@ Performance Issues:
 
 ---
 
-**Quick Start**: Mở **[[README]]** để bắt đầu, sau đó sử dụng **[[Map of Content (MOC)]]** để navigate toàn bộ knowledge base. Use tags và search để tìm thông tin nhanh chóng!
+**Quick Start**: Mở **[README](README.md)** để bắt đầu, sau đó sử dụng **[Map of Content (MOC)](Map%20of%20Content%20(MOC).md)** để navigate toàn bộ knowledge base. Use tags và search để tìm thông tin nhanh chóng!

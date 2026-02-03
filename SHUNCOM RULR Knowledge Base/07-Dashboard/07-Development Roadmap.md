@@ -2,9 +2,10 @@
 
 > Implementation timeline, priorities, và development phases cho SHUNCOM RULR IoT Platform
 
-**Tags**: #development-guide #roadmap #implementation #planning  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -500,15 +501,15 @@ Performance:
 ## 🔗 Related Documentation
 
 ### Planning Resources
-- **[[Feature Requirements Checklist]]** - Detailed requirements
-- **[[Testing Scenarios]]** - QA planning
-- **[[Performance Benchmarks]]** - Performance targets
+- **[Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md)** - Detailed requirements
+- **[Testing Scenarios](../08-Development-Guide/Testing%20Scenarios.md)** - QA planning
+- **[Performance Benchmarks](../08-Development-Guide/Performance%20Benchmarks.md)** - Performance targets
 
 ### Technical Guides
-- **[[01-System Overview]]** - Architecture reference
-- **[[03-Device Management Hub]]** - Device implementation details
-- **[[04-Rule Engine System]]** - Rule engine specifications
+- **[01-System Overview](../01-Overview/01-System%20Overview.md)** - Architecture reference
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)** - Device implementation details
+- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)** - Rule engine specifications
 
 ---
 
-**Next Steps**: Review [[Feature Requirements Checklist]] and begin Phase 1 Sprint 1 planning. Ensure team is assembled and development environment is ready.
+**Next Steps**: Review [Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md) and begin Phase 1 Sprint 1 planning. Ensure team is assembled and development environment is ready.

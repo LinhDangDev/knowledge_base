@@ -10,6 +10,10 @@ status: final
 
 > Infrastructure and deployment patterns for SHUNCOM RULR IoT Platform
 
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 ---
 
 ## 📊 Architecture Overview
@@ -511,7 +515,7 @@ Business:
 
 ## 🔗 Related Documentation
 
-- **[[02-Authentication System]]**: Security implementation
-- **[[Security Architecture]]**: Security details
-- **[[Performance Benchmarks]]**: Performance targets
-- **[[07-Development Roadmap]]**: Deployment timeline
+- **[02-Authentication System](02-Authentication%20System.md)**: Security implementation
+- **[Security Architecture](../08-Development-Guide/Security%20Architecture.md)**: Security details
+- **[Performance Benchmarks](../08-Development-Guide/Performance%20Benchmarks.md)**: Performance targets
+- **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: Deployment timeline

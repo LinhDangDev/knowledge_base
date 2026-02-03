@@ -2,9 +2,10 @@
 
 > Quản lý dự án, cấu trúc phân cấp và cấu hình hiển thị
 
-**Tags**: #project-management #gis-integration #dashboard-config  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -410,10 +411,10 @@ Project Naming Conventions:
 ## 🔗 Related Documentation
 
 ### Dependencies
-- **[[02-Authentication System]]** - Project access permissions
-- **[[03-Device Management Hub]]** - Device-project associations
-- **[[04-Rule Engine System]]** - Project-scoped rules
-- **[[06-Dashboard Interface]]** - Project dashboard views
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)** - Project access permissions
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)** - Device-project associations
+- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)** - Project-scoped rules
+- **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)** - Project dashboard views
 
 ### Configuration Guides
 - **[[GIS Integration Guide]]** - Detailed mapping setup
@@ -423,4 +424,4 @@ Project Naming Conventions:
 
 ---
 
-**Next Steps**: After project structure is established, proceed to [[03-Device Management Hub]] for device registration and association workflows.
+**Next Steps**: After project structure is established, proceed to [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md) for device registration and association workflows.

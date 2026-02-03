@@ -10,7 +10,10 @@ status: final
 
 > Complete guide for configuring GIS map integration, coordinates, boundaries, and location-based device management
 
-**Tags**: #gis #maps #geolocation #project-management #configuration
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -690,19 +693,19 @@ Optimization Strategies:
 ## 🔗 Related Documentation
 
 ### Configuration Guides
-- **[[05-Project Management]]** - Project setup with GIS
-- **[[03-Device Management Hub]]** - Device coordinate management
-- **[[06-Dashboard Interface]]** - Map interface in dashboard
+- **[05-Project Management](../05-User-Management/05-Project%20Management.md)** - Project setup with GIS
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)** - Device coordinate management
+- **[06-Dashboard Interface](06-Dashboard%20Interface.md)** - Map interface in dashboard
 
 ### Technical References
-- **[[Integration Guide]]** - Map provider integration
-- **[[API Endpoints Map]]** - GIS-related API endpoints
-- **[[Performance Benchmarks]]** - Map performance targets
+- **[Integration Guide](../02-System-Architecture/Integration%20Guide.md)** - Map provider integration
+- **[API Endpoints Map](../02-System-Architecture/API%20Endpoints%20Map.md)** - GIS-related API endpoints
+- **[Performance Benchmarks](../08-Development-Guide/Performance%20Benchmarks.md)** - Map performance targets
 
 ### Rule Integration
-- **[[04-Rule Engine System]]** - Location-based rule setup
-- **[[Rule Configuration Patterns]]** - Geofence rule patterns
+- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)** - Location-based rule setup
+- **[Rule Configuration Patterns](../04-Rule-Management/Rule%20Configuration%20Patterns.md)** - Geofence rule patterns
 
 ---
 
-**Next Steps**: After configuring GIS, proceed to [[06-Dashboard Interface]] to customize the map display in your dashboard, or explore [[Rule Configuration Patterns]] for location-based automation.
+**Next Steps**: After configuring GIS, proceed to [06-Dashboard Interface](06-Dashboard%20Interface.md) to customize the map display in your dashboard, or explore [Rule Configuration Patterns](../04-Rule-Management/Rule%20Configuration%20Patterns.md) for location-based automation.

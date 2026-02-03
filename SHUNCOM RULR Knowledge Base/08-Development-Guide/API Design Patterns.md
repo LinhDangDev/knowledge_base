@@ -2,9 +2,10 @@
 
 > RESTful API standards and patterns for SHUNCOM RULR IoT Platform backend
 
-**Tags**: #api #backend #development-guide #rest #patterns  
-**Created**: 2025-01-23  
-**Last Updated**: 2025-01-23
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -599,13 +600,13 @@ Dashboard Topics:
 ## 🔗 Related Documentation
 
 ### Implementation Guides
-- **[[Database Schema]]**: Data model design
-- **[[02-Authentication System]]**: Auth implementation details
-- **[[07-Development Roadmap]]**: API implementation timeline
+- **[Database Schema](../02-System-Architecture/Database%20Schema.md)**: Data model design
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Auth implementation details
+- **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: API implementation timeline
 
 ### Testing & Quality
-- **[[Testing Scenarios]]**: API testing procedures
-- **[[Performance Benchmarks]]**: API performance requirements
+- **[Testing Scenarios](Testing%20Scenarios.md)**: API testing procedures
+- **[Performance Benchmarks](Performance%20Benchmarks.md)**: API performance requirements
 
 ---
 

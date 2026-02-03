@@ -10,6 +10,10 @@ status: final
 
 > Guidelines for implementing gateway-based local rules in SHUNCOM RULR
 
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 ---
 
 ## 📋 Overview
@@ -376,7 +380,7 @@ Note: Platform rules override when available
 
 ## 🔗 Related Documentation
 
-- **[[04-Rule Engine System]]**: Complete rule system
-- **[[Rule Configuration Patterns]]**: Rule patterns
-- **[[03-Device Management Hub]]**: Gateway configuration
-- **[[Protocol Guides]]**: Device communication
+- **[04-Rule Engine System](04-Rule%20Engine%20System.md)**: Complete rule system
+- **[Rule Configuration Patterns](Rule%20Configuration%20Patterns.md)**: Rule patterns
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)**: Gateway configuration
+- **[Protocol Guides](../03-Device-Management/Protocol%20Guides.md)**: Device communication

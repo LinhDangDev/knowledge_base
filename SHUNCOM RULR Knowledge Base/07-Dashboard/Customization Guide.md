@@ -10,7 +10,10 @@ status: final
 
 > Complete guide for customizing dashboard layouts, widgets, themes, and user preferences
 
-**Tags**: #dashboard #customization #layout #widgets #personalization
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -653,17 +656,17 @@ Auto-Backup:
 ## 🔗 Related Documentation
 
 ### Widget Details
-- **[[Widget Reference]]** - Complete widget catalog
-- **[[06-Dashboard Interface]]** - Dashboard system overview
+- **[Widget Reference](Widget%20Reference.md)** - Complete widget catalog
+- **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)** - Dashboard system overview
 
 ### Design Standards
-- **[[UI Design Guidelines]]** - Design system standards
-- **[[UI Component Library]]** - Available UI components
+- **[UI Design Guidelines](../08-Development-Guide/UI%20Design%20Guidelines.md)** - Design system standards
+- **[UI Component Library](../08-Development-Guide/UI%20Component%20Library.md)** - Available UI components
 
 ### User Management
-- **[[Permission Matrices]]** - Dashboard access permissions
-- **[[User Onboarding Guide]]** - New user setup
+- **[Permission Matrices](../05-User-Management/Permission%20Matrices.md)** - Dashboard access permissions
+- **[User Onboarding Guide](../05-User-Management/User%20Onboarding%20Guide.md)** - New user setup
 
 ---
 
-**Next Steps**: Review [[Widget Reference]] for detailed widget configurations, or see [[UI Design Guidelines]] for design consistency standards.
+**Next Steps**: Review [Widget Reference](Widget%20Reference.md) for detailed widget configurations, or see [UI Design Guidelines](../08-Development-Guide/UI%20Design%20Guidelines.md) for design consistency standards.

@@ -2,9 +2,10 @@
 
 > Complete guide to IoT device lifecycle management across 7 device categories
 
-**Tags**: #device-management #iot-devices #hardware #configuration  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -567,10 +568,10 @@ graph LR
 ```
 
 ### System Dependencies
-1. **[[05-Project Management]]**: Device-project associations
-2. **[[02-Authentication System]]**: Device access permissions
-3. **[[04-Rule Engine System]]**: Device control automation
-4. **[[06-Dashboard Interface]]**: Device status visualization
+1. **[05-Project Management](../05-User-Management/05-Project%20Management.md)**: Device-project associations
+2. **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Device access permissions
+3. **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)**: Device control automation
+4. **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)**: Device status visualization
 
 ---
 
@@ -614,4 +615,4 @@ Optimization Strategies:
 
 ---
 
-**Next Steps**: Configure [[05-Project Management]] structure before large-scale device deployment, then set up [[04-Rule Engine System]] for device automation.
+**Next Steps**: Configure [05-Project Management](../05-User-Management/05-Project%20Management.md) structure before large-scale device deployment, then set up [04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md) for device automation.

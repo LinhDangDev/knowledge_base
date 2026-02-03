@@ -10,6 +10,10 @@ status: final
 
 > How to integrate SHUNCOM RULR with external systems and services
 
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 ---
 
 ## 📋 Integration Overview
@@ -504,7 +508,7 @@ Sandbox Environment:
 
 ## 🔗 Related Documentation
 
-- **[[API Endpoints Map]]**: Complete API reference
-- **[[API Design Patterns]]**: API standards
-- **[[Security Architecture]]**: Security requirements
-- **[[02-Authentication System]]**: Auth details
+- **[API Endpoints Map](API%20Endpoints%20Map.md)**: Complete API reference
+- **[API Design Patterns](../08-Development-Guide/API%20Design%20Patterns.md)**: API standards
+- **[Security Architecture](../08-Development-Guide/Security%20Architecture.md)**: Security requirements
+- **[02-Authentication System](02-Authentication%20System.md)**: Auth details

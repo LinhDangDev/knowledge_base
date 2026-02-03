@@ -2,9 +2,10 @@
 
 > Comprehensive development checklist for SHUNCOM RULR IoT Platform implementation
 
-**Tags**: #development-guide #requirements #checklist #feature-tracking  
-**Created**: 2025-01-22  
-**Last Updated**: 2025-01-22
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 

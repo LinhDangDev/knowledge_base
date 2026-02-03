@@ -2,9 +2,10 @@
 
 > Security implementation design for SHUNCOM RULR IoT Platform
 
-**Tags**: #security #architecture #development-guide #authentication #authorization  
-**Created**: 2025-01-23  
-**Last Updated**: 2025-01-23
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -584,12 +585,12 @@ Response Procedures:
 ## 🔗 Related Documentation
 
 ### Implementation
-- **[[02-Authentication System]]**: Auth system details
-- **[[API Design Patterns]]**: API security implementation
-- **[[Database Schema]]**: Data security at database level
+- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Auth system details
+- **[API Design Patterns](API%20Design%20Patterns.md)**: API security implementation
+- **[Database Schema](../02-System-Architecture/Database%20Schema.md)**: Data security at database level
 
 ### Testing
-- **[[Testing Scenarios]]**: Security test cases
+- **[Testing Scenarios](Testing%20Scenarios.md)**: Security test cases
 
 ---
 

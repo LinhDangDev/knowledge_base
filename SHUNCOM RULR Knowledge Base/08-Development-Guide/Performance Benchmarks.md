@@ -2,9 +2,10 @@
 
 > System performance requirements and benchmarks for SHUNCOM RULR IoT Platform
 
-**Tags**: #performance #benchmarks #development-guide #requirements  
-**Created**: 2025-01-23  
-**Last Updated**: 2025-01-23
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -471,12 +472,12 @@ Network:
 ## 🔗 Related Documentation
 
 ### Implementation
-- **[[Testing Scenarios]]**: Performance test procedures
-- **[[07-Development Roadmap]]**: Optimization timeline
-- **[[Database Schema]]**: Query optimization context
+- **[Testing Scenarios](Testing%20Scenarios.md)**: Performance test procedures
+- **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: Optimization timeline
+- **[Database Schema](../02-System-Architecture/Database%20Schema.md)**: Query optimization context
 
 ### Monitoring
-- **[[API Design Patterns]]**: API performance patterns
+- **[API Design Patterns](API%20Design%20Patterns.md)**: API performance patterns
 
 ---
 

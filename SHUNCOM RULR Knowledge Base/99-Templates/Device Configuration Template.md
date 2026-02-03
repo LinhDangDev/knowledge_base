@@ -2,9 +2,10 @@
 
 > Template for documenting device configuration requirements and specifications
 
-**Tags**: #template #device-configuration #documentation  
-**Created**: {{date}}  
-**Last Updated**: {{date}}
+{% hint style="info" %}
+**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
+{% endhint %}
+
 
 ---
 
@@ -191,6 +192,6 @@ Authentication Method: {{auth_method}}
 
 ## 🔗 Related Documentation
 
-- **[[03-Device Management Hub]]**: Device management guide
-- **[[Device Types Reference]]**: Device type specifications
-- **[[Troubleshooting Guide]]**: Common issues and solutions
+- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)**: Device management guide
+- **[Device Types Reference](../Device%20Types%20Reference.md)**: Device type specifications
+- **[Troubleshooting Guide](../08-Development-Guide/Troubleshooting%20Guide.md)**: Common issues and solutions
