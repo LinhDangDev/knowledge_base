@@ -15,9 +15,7 @@
 
 ### 🎯 For New Users
 
-{% content-ref url="SHUNCOM RULR Knowledge Base/Map of Content (MOC).md" %}
-[Map of Content (MOC)](SHUNCOM%20RULR%20Knowledge%20Base/Map%20of%20Content%20\(MOC\).md)
-{% endcontent-ref %}
+📖 **[Map of Content (MOC)](SHUNCOM%20RULR%20Knowledge%20Base/Map%20of%20Content%20(MOC).md)** - Start here for a guided tour of the knowledge base
 
 ### 📋 Documentation Sections
 

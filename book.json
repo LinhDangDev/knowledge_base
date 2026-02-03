@@ -1,0 +1,25 @@
+{
+  "title": "SHUNCOM RULR IoT Platform Knowledge Base",
+  "description": "Comprehensive knowledge base for SHUNCOM RULR IoT Platform development and operation",
+  "author": "Development Team",
+  "language": "en",
+  "gitbook": ">=3.0.0",
+  "root": ".",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "highlight",
+    "search",
+    "lunr",
+    "fontsettings",
+    "theme-default",
+    "-mermaid"
+  ],
+  "pluginsConfig": {
+    "highlight": {
+      "exclude": ["mermaid"]
+    }
+  }
+}
