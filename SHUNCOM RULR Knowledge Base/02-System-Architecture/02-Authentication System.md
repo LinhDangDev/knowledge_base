@@ -1,337 +1,136 @@
-# 🔐 Authentication System
+# Authentication System
 
-> User management, roles, permissions and organizational structure
+## Overview
+- Canonical topic: Authentication and access control
+- Goal: Chuẩn hóa tri thức về login, user lifecycle, role model, management scope, và access decision logic theo model Manufacturer / Project Admin / Project Member.
+- Primary users: BA, PM, QA, Dev, security reviewer, Manufacturer, Project Admin
 
-{% hint style="info" %}
-**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
-{% endhint %}
-
-
----
-
-## 🏢 System Architecture
-
-### User Management Hierarchy
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```mermaid
-graph TB
-    A[Organization] --> B[Users]
-    B --> C[Roles]
-    C --> D[Permissions]
-    D --> E[Management Scopes]
-    
-    F[User] --> G[Multiple Roles]
-    G --> H[Combined Permissions]
-    H --> I[Project Access]
-    H --> J[Device Access]
-    H --> K[Feature Access]
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```
-
----
-
-## 👤 User Management
-
-### User Lifecycle
-**Navigation**: `Settings > Basic Configuration > Organization and Users > User Management`
-
-#### User States
-- ✅ **Enabled**: Full system access
-- ❌ **Disabled**: Login blocked
-- 🗑️ **Deleted**: Permanent removal
-
-#### Core User Operations
-1. **[[User Creation Process]]** - Adding new users
-2. **[[User Role Assignment]]** - Permission management
-3. **[[Management Scope Configuration]]** - Access boundaries
-4. **[[User Status Management]]** - Enable/disable accounts
-
-### User Creation Requirements
+## Provenance
+### Source summary
 ```yaml
-Required Fields:
-  - Account Information
-  - Platform Role (if available)
-  - Management Scope (if configured)
-
-Optional Fields:
-  - User Description
-  - Contact Information
-  - Department Assignment
+Document status: Canonical draft
+Confidence: Medium
+Last validated: 2026-04-12
+Validated by: Claude Code
+Primary source type: user-confirmed-business-rule
+Canonical topic: authentication-system
 ```
 
----
+### Primary sources used
+| Source | Path | Why it matters |
+|---|---|---|
+| User instruction in chat | current conversation | canonical role model |
+| Existing KB doc | `02-System-Architecture/02-Authentication System.md` | previous auth baseline |
+| Existing KB doc | `05-User-Management/Permission Matrices.md` | permission posture |
+| Existing KB doc | `05-User-Management/Role Design Patterns.md` | role semantics |
+| Flow doc | `docs/shuncom-iot-screen-flows.md` | login, user create, scope flows |
+| BA doc | `docs/shuncom-iot-ba-user-stories.md` | auth/user/scope stories |
+| Analysis doc | `SHUNCOM_RULR_IoT_Platform_Analysis.md` | auth and scope context |
 
-## 🎭 Role-Based Access Control (RBAC)
+### Validation gaps
+- Token/session implementation details remain backend-dependent and not fully source-verified.
+- Exact permission-key names and claim shape in tokens remain implementation-specific.
 
-### Role Architecture
-**Concept**: Roles = Function Rights Management
+## Scope
+### In scope
+- Login and access decision
+- User state
+- Role model
+- Management scope
+- Permission + scope interplay
 
-#### Role Features
-- **Granular Permissions**: Page-level and function-level control
-- **Multiple Assignment**: 1 user → multiple roles
-- **Reusable Roles**: 1 role → multiple users  
-- **Dynamic Configuration**: Real-time permission updates
+### Out of scope
+- Detailed JWT/refresh-token implementation contract
+- MFA provider specifics
+- Password storage implementation internals
 
-### Role Configuration Process
-**Navigation**: `Settings > Basic Configuration > Organization and Users > Permission Management > User Role`
+## Standard role model
+### Manufacturer
+- Highest authority role.
+- Scope: toàn hệ thống, tất cả area, tất cả project.
+- Permissions: full.
 
-#### Role Creation Steps
-1. **Basic Information**
-   ```yaml
-   Role Name: "Device Manager"
-   Description: "Manage all device operations"
-   ```
+### Project Admin
+- Full authority inside managed project scope.
+- Can manage project-level resources and configure Project Member permissions within that scope.
 
-2. **Permission Assignment**
-   ```yaml
-   Pages Access:
-     - Device Management: ✅
-     - Project Management: ✅
-     - Rule Management: ❌
-   
-   Function Permissions:
-     - View Devices: ✅
-     - Add Devices: ✅
-     - Delete Devices: ❌
-     - Batch Operations: ✅
-   ```
+### Project Member
+- Delegated role envelope.
+- Permissions are configured by Project Admin.
+- Scope remains bounded to delegated project/sub-scope.
 
-3. **User Association**
-   - Select users for role assignment
-   - Support bulk user assignment
+## User lifecycle
+| State | Meaning |
+|---|---|
+| Active / enabled | can login and use assigned scope |
+| Disabled | login blocked |
+| Deleted / removed | no longer active in system lifecycle |
 
----
+## Authentication flow
+1. User submits credentials.
+2. System validates account.
+3. System verifies active/disabled state.
+4. System resolves role.
+5. System resolves scope.
+6. System grants session/access only within allowed scope.
 
-## 🎯 Management Scope System
+## Access decision model
+### Required checks
+1. User identity valid
+2. User state active
+3. Role permits action
+4. Scope includes target resource
 
-### Scope Hierarchy
+### Practical effect
+- Manufacturer bypasses project boundary restrictions by design.
+- Project Admin gets full control only inside managed project(s).
+- Project Member sees/does only what Project Admin configured.
 
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```mermaid
-graph LR
-    A[Management Scope] --> B[Projects]
-    A --> C[Product Categories] 
-    A --> D[Device Groups]
-    
-    E[User] --> F[Assigned Scopes]
-    F --> B
-    F --> C  
-    F --> D
+## Management scope model
+| Scope model | Typical role |
+|---|---|
+| Global all-area scope | Manufacturer |
+| Managed project scope | Project Admin |
+| Delegated project/sub-scope | Project Member |
 
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```
+### Supported scope dimensions
+- project
+- group
+- device
+- product category (if UI/implementation supports)
 
-### Scope Types
-1. **Project Scope**: Which projects user can access
-2. **Product Category Scope**: Which device types user can manage
-3. **Group Scope**: Which device groups user can control
+## Business constraints
+- Manufacturer is the only global all-area/all-permission role.
+- Project Admin must not gain authority outside managed projects.
+- Project Member must not exceed delegated project scope.
+- Visibility and action rights depend on both role and scope.
+- Disabled users cannot login even if role/scope are otherwise valid.
+- Time zone preference can influence time-based feature behavior but does not change authorization boundaries.
 
-### Default Scopes
-- **Tenant Admin**: All scopes by default
-- **Regular Users**: Limited scopes configured by admin
-- **Auto-Generated**: 
-  - Unassigned projects group
-  - 'Ungrouped' device group
+## API contract posture
+- Auth and user endpoints remain inventory-level references unless verified with backend/OpenAPI source.
+- Do not treat token claim examples or permission strings from docs as final implementation contract.
 
-### Scope Configuration
-**Navigation**: `Settings > Basic Configuration > Organization and Users > Permission Management > Management Scope`
+## Data and integration touchpoints
+| Type | Item | Purpose |
+|---|---|---|
+| API | `/auth/*` | login/session lifecycle |
+| API | `/users` | user creation/update |
+| Data | users / roles / scopes / orgs | access model |
+| Audit | login, role change, scope change | traceability |
 
-#### Configuration Process
-```yaml
-Scope Creation:
-  Name: "Regional Manager - North"
-  Product Categories: 
-    - Smart Gateways ✅
-    - Light Controllers ✅
-    - Smart Meters ❌
-  
-  Projects:
-    - North Region Projects ✅
-    - Central Projects ❌
-  
-  Groups:
-    - North Street Lights ✅
-    - North Industrial ✅
-```
+## Logging and audit implications
+- Log successful and failed login attempts.
+- Log user creation, disable/enable, role assignment, and scope changes.
+- Log delegated permission changes for Project Member.
+- Log access denials where security/audit policy requires it.
 
----
+## Related docs
+- [Permission Matrices](../05-User-Management/Permission%20Matrices.md)
+- [Role Design Patterns](../05-User-Management/Role%20Design%20Patterns.md)
+- [User Onboarding Guide](../05-User-Management/User%20Onboarding%20Guide.md)
+- [Security Architecture](../08-Development-Guide/Security%20Architecture.md)
 
-## 🏢 Organization Management
-
-### Organization Configuration
-**Navigation**: `Settings > Basic Configuration > Organization and Users > Organization Management`
-
-#### Organization Features
-- **Logo Upload**: Displayed in upper-left corner
-- **Company Information**: Complete organization details
-- **Branding**: Custom platform appearance
-- **Tenant Configuration**: Multi-tenant support
-
-#### Organization Setup
-```yaml
-Organization Details:
-  Company Name: "City Infrastructure Department"
-  Logo: company_logo.png
-  Address: "123 Government Building"
-  Contact: "admin@city.gov"
-  
-Display Settings:
-  Brand Colors: #custom-theme
-  Logo Position: upper-left
-  Company Footer: ✅
-```
-
----
-
-## 🔄 Authentication Workflows
-
-### Login Process
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant LP as Login Page  
-    participant AUTH as Auth Service
-    participant DB as User Database
-    participant DASH as Dashboard
-    
-    U->>LP: Access https://rulr-aiot.com
-    LP->>U: Display Login Form
-    U->>LP: Enter Credentials
-    LP->>AUTH: Validate Credentials
-    AUTH->>DB: Check User Status
-    DB-->>AUTH: User Status + Permissions
-    AUTH-->>LP: Authentication Result
-    
-    alt User Enabled
-        LP->>DASH: Redirect to Dashboard
-        DASH->>U: Show Authorized Interface
-    else User Disabled  
-        LP->>U: Display "Account Disabled"
-    end
-```
-
-### Permission Checking
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```mermaid
-graph TD
-    A[User Action Request] --> B{User Enabled?}
-    B -->|No| C[Deny Access]
-    B -->|Yes| D{Has Required Role?}
-    D -->|No| C
-    D -->|Yes| E{Within Management Scope?}
-    E -->|No| C
-    E -->|Yes| F{Has Function Permission?}
-    F -->|No| C
-    F -->|Yes| G[Grant Access]
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```
-
----
-
-## ⚙️ Implementation Guidelines
-
-### User Creation Best Practices
-1. **Pre-planning**: Define roles before creating users
-2. **Scope Planning**: Map organizational structure to scopes
-3. **Security**: Use strong password policies
-4. **Documentation**: Maintain user role assignments
-
-### Permission Design Patterns
-```yaml
-Role Design Strategy:
-  Functional Roles:
-    - "Device Operator": Day-to-day device management
-    - "Rule Manager": Configure automation rules
-    - "Report Viewer": Read-only dashboard access
-    
-  Hierarchical Roles:
-    - "Site Manager": Full site control
-    - "Regional Manager": Multiple site access  
-    - "System Admin": Platform administration
-    
-  Combined Approach:
-    - Assign multiple functional roles per user
-    - Use management scopes for data isolation
-```
-
-### Security Considerations
-- **Principle of Least Privilege**: Minimum required permissions
-- **Regular Audits**: Periodic permission reviews
-- **Segregation of Duties**: Critical operations require multiple roles
-- **Temporal Access**: Time-bound permissions for contractors
-
----
-
-## 🔗 Related Documentation
-
-### Technical Implementation
-- [[User Database Schema]] - Data model for users and permissions
-- [[Authentication API]] - Login and session management endpoints
-- [[Permission Engine]] - Runtime permission checking logic
-
-### Operational Guides
-- [[User Onboarding Checklist]] - New user setup procedures
-- [[Role Management Workflows]] - Role lifecycle management
-- [[Security Audit Procedures]] - Regular security reviews
-
-### Integration Points
-- [05-Project Management](../05-User-Management/05-Project%20Management.md) - Project-user associations
-- [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md) - Device access control
-- [04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md) - Rule execution permissions
-
----
-
-## 📋 Quick Reference
-
-### Critical Time Zone Impact
-⚠️ **Important**: Time zone setting affects ALL rule executions
-- **Location**: My Account > Preferences > Time Zone
-- **Impact**: Platform Rules, Local Rules, Alarm Rules timing
-- **Recommendation**: Set time zone before any rule configuration
-
-### Default Permissions
-```yaml
-Tenant Administrator:
-  - All management scopes ✅
-  - All platform features ✅
-  - User management ✅
-  - System configuration ✅
-
-New User (Default):
-  - Limited scope (configured by admin)
-  - Basic dashboard access
-  - No administrative functions
-  - Read-only permissions initially
-```
-
----
-
-**Next Steps**: Configure [05-Project Management](../05-User-Management/05-Project%20Management.md) structure before assigning management scopes to users.
+## Open questions
+- Exact token/session/MFA behaviors need backend confirmation if used for implementation contract.
+- Fine-grained sub-scope dimensions for Project Member need UI/backend verification if the product exposes them explicitly.

@@ -612,7 +612,6 @@ Dashboard Topics:
 ## 🔗 Related Documentation
 
 ### Implementation Guides
-- **[Database Schema](../02-System-Architecture/Database%20Schema.md)**: Data model design
 - **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Auth implementation details
 - **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: API implementation timeline
 

@@ -1,380 +1,200 @@
----
-title: User Onboarding Guide
-tags: [user-management, onboarding, guide, operations]
-created: 2025-01-23
-updated: 2025-01-23
-status: final
----
+# User Onboarding Guide
 
-# 👋 User Onboarding Guide
+## Overview
+- Canonical topic: User onboarding and member assignment
+- Goal: Hướng dẫn tạo user mới, gán đúng role chuẩn, và cấu hình đúng project/member permissions theo model hiện tại.
+- Primary users: Manufacturer, Project Admin, onboarding/support staff
 
-> Step-by-step guide for adding and configuring new users in SHUNCOM RULR
+## Provenance
+### Source summary
+```yaml
+Document status: Canonical draft
+Confidence: Medium
+Last validated: 2026-04-12
+Validated by: Claude Code
+Primary source type: user-confirmed-business-rule
+Canonical topic: user-onboarding-guide
+```
 
-{% hint style="info" %}
-**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
-{% endhint %}
+### Primary sources used
+| Source | Path | Why it matters |
+|---|---|---|
+| User instruction in chat | current conversation | role model and responsibility boundaries |
+| Existing KB doc | `05-User-Management/User Onboarding Guide.md` | prior onboarding process |
+| Existing KB doc | `05-User-Management/Permission Matrices.md` | permission model baseline |
+| Existing KB doc | `05-User-Management/Role Design Patterns.md` | delegated role guidance |
+| Flow doc | `docs/shuncom-iot-screen-flows.md` | user creation / scope flow |
 
----
+### Validation gaps
+- UI wording for permission delegation to Project Member may differ in implementation.
+- Invite flow/email delivery specifics may vary by deployment.
 
-## 📋 Onboarding Checklist
+## Scope
+### In scope
+- Create user
+- Assign Manufacturer / Project Admin / Project Member
+- Configure project-bound permissions for Project Member
+- Verify login and scope visibility
 
-### Pre-Onboarding
-- [ ] Determine user's role and responsibilities
-- [ ] Identify required permissions
-- [ ] Define management scope (projects/groups)
-- [ ] Prepare welcome materials
-- [ ] Schedule training if needed
+### Out of scope
+- HR/offboarding policy at enterprise level
+- SSO/LDAP deep integration specifics
+- Legacy role migration details
 
-### Account Creation
-- [ ] Create user account
-- [ ] Assign role
-- [ ] Configure management scope
-- [ ] Set temporary password
-- [ ] Send credentials securely
+## Onboarding checklist
+### Pre-onboarding
+- [ ] Xác định user thuộc Manufacturer, Project Admin, hay Project Member
+- [ ] Xác định project scope cần cấp
+- [ ] Nếu là Project Member: xác định permission-set cụ thể do Project Admin cấu hình
+- [ ] Chuẩn bị credential delivery method an toàn
 
-### Post-Creation
-- [ ] Verify user can login
-- [ ] Confirm access to required resources
-- [ ] Complete initial training
-- [ ] Document in user registry
+### Account creation
+- [ ] Tạo user account
+- [ ] Gán role chuẩn
+- [ ] Gán scope phù hợp
+- [ ] Nếu là Project Member: cấu hình permissions cụ thể
+- [ ] Cấp credential tạm thời
 
----
+### Post-creation verification
+- [ ] Verify user login được
+- [ ] Verify user chỉ thấy đúng scope
+- [ ] Verify user làm được đúng actions được cấp
+- [ ] Verify user không làm được actions ngoài quyền
 
-## 🔧 Step-by-Step User Creation
+## Standard onboarding paths
+### 1. Manufacturer onboarding
+Use when user cần toàn quyền toàn platform.
 
-### Step 1: Access User Management
+Typical setup:
+- role: Manufacturer
+- scope: all areas / all projects / all resources
+- permissions: full
 
+### 2. Project Admin onboarding
+Use when user quản lý một hoặc nhiều project cụ thể.
+
+Typical setup:
+- role: Project Admin
+- scope: managed project(s)
+- permissions: full within managed project scope
+
+### 3. Project Member onboarding
+Use when user là member trong project do Project Admin quản lý.
+
+Typical setup:
+- role: Project Member
+- scope: project hoặc subset trong project
+- permissions: configured by Project Admin
+
+## Step-by-step onboarding flow
+### Step 1: Access user management
 ```yaml
 Navigation:
   Settings > User Management > Users > Add User
-  
-Required Permission:
-  users.write or users.admin
+
+Required authority:
+  Manufacturer or Project Admin (within managed project scope)
 ```
 
-### Step 2: Enter Basic Information
-
+### Step 2: Enter basic information
 ```yaml
-Required Fields:
-  Username: 
-    - Unique identifier
-    - Alphanumeric, 4-50 characters
-    - Cannot be changed after creation
-    
-  Email:
-    - Valid email address
-    - Used for notifications and password reset
-    
-  Display Name:
-    - Full name for display
-    - Can contain spaces
-    
-  Phone (Optional):
-    - For SMS notifications
-    - Include country code
-    
-  Initial Password:
-    - Minimum 8 characters
-    - Must include: uppercase, lowercase, number, special char
-    - Or use "Generate Random" option
+Typical fields:
+  Username / account
+  Email
+  Display name
+  Phone (optional)
+  Initial password or invite method
+  Status
 ```
 
-### Step 3: Assign Role
-
+### Step 3: Assign standard role
 ```yaml
-Role Selection:
-  Consider:
-    - What actions does user need to perform?
-    - What data does user need to access?
-    - Principle of least privilege
-    
-  Common Assignments:
-    IT Staff → Organization Admin
-    Site Manager → Project Manager
-    Technician → Operator
-    Stakeholder → Viewer
-    
-  Custom Role:
-    - Select from pre-defined custom roles
-    - Or create new role if needed
+Role selection:
+  - Manufacturer
+  - Project Admin
+  - Project Member
 ```
 
-### Step 4: Configure Management Scope
-
+### Step 4: Configure scope
 ```yaml
-Scope Configuration:
-  For Organization Admin:
-    - Automatic: Full organization access
-    
-  For Project Manager:
-    - Select specific projects
-    - Include sub-projects automatically
-    
-  For Operator:
-    - Select specific projects or groups
-    - May limit to device groups
-    
-  For Viewer:
-    - Select viewable projects
-    - Read-only on selected scope
+Manufacturer:
+  - All areas / all resources
 
-Example Scope Assignment:
-  User: John Smith (Operator)
-  Scope Type: Projects
-  Selected:
-    - ✅ North Region
-    - ✅ Industrial Zone A
-    - ❌ South Region (not assigned)
+Project Admin:
+  - Select managed project(s)
+
+Project Member:
+  - Select project scope
+  - Optional narrower scope by group/device/category if UI supports it
 ```
 
-### Step 5: Configure Notifications (Optional)
-
+### Step 5: Configure Project Member permissions
 ```yaml
-Notification Preferences:
-  Email Notifications:
-    - [ ] Critical alarms
-    - [ ] Daily summary reports
-    - [ ] System announcements
-    
-  SMS Notifications:
-    - [ ] Critical alarms only
-    
-  In-App Notifications:
-    - [x] All alarm notifications
-    - [x] Rule execution failures
+Permission-set examples:
+  Viewer-like:
+    - dashboard.read
+    - devices.read
+    - rules.read
+    - reports.read
+
+  Operator-like:
+    - Viewer-like rights
+    - devices.execute
+    - alarms.acknowledge
+    - alarms.resolve
+
+  Engineer-like:
+    - Operator-like rights
+    - rules.write
+    - selected device config rights
 ```
 
-### Step 6: Review and Create
+### Step 6: Review and create
+Review before create:
+- correct role
+- correct project scope
+- correct delegated permissions
+- no accidental over-scope access
 
-```yaml
-Review Summary:
-  Username: jsmith
-  Email: john.smith@company.com
-  Display Name: John Smith
-  Role: Operator
-  Scope: North Region, Industrial Zone A
-  Notifications: Email (critical), In-app (all)
-  
-Actions:
-  [Create User] [Cancel]
-```
+## Verification steps
+### Basic verification
+- [ ] User can login
+- [ ] User sees expected dashboard context
+- [ ] User sees only allowed project scope
 
----
+### Role-specific verification
+#### Manufacturer
+- [ ] Can see all project areas
+- [ ] Can access all core modules
 
-## 📧 Credential Delivery
+#### Project Admin
+- [ ] Can fully manage assigned project(s)
+- [ ] Cannot exceed non-managed projects
+- [ ] Can configure Project Member permissions inside managed scope
 
-### Secure Methods
+#### Project Member
+- [ ] Can see only delegated scope
+- [ ] Can execute only delegated actions
+- [ ] Cannot self-elevate or manage membership
 
-```yaml
-Option 1 - Email Invitation:
-  Platform sends email with:
-    - Login URL
-    - Username
-    - Temporary password link (expires in 24h)
-    - Force password change on first login
-  
-Option 2 - Manual Communication:
-  Admin provides via:
-    - Encrypted email
-    - Secure messaging app
-    - In-person delivery
-  
-Option 3 - SSO/LDAP:
-  - No password needed
-  - User logs in with corporate credentials
-  - Automatic provisioning on first login
-```
+## Common issues
+| Issue | Likely cause | Fix direction |
+|---|---|---|
+| User cannot login | wrong credentials / disabled state | reset credential or enable account |
+| User sees no devices | wrong project scope | adjust scope |
+| Project Member can do too much | over-granted delegated permissions | reduce permission set |
+| Project Admin cannot manage member | wrong role or wrong project ownership | verify managed project binding |
 
-### Welcome Email Template
+## Logging and audit implications
+- User creation, role assignment, scope assignment, and delegated-permission changes should all be audited.
+- Project Admin changes to Project Member permissions are especially important to track.
 
-```text
-Subject: Welcome to SHUNCOM RULR Platform
+## Related docs
+- [Permission Matrices](Permission%20Matrices.md)
+- [Role Design Patterns](Role%20Design%20Patterns.md)
+- [02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)
+- [Security Architecture](../08-Development-Guide/Security%20Architecture.md)
 
-Hello {Display Name},
-
-Your account has been created for the SHUNCOM RULR IoT Platform.
-
-Login Details:
-- URL: https://app.shuncom-rulr.com
-- Username: {username}
-- Temporary Password: {password_link}
-
-Please login within 24 hours and change your password.
-
-Your assigned role: {role}
-Your access scope: {scope}
-
-If you have questions, contact your administrator.
-
-Best regards,
-SHUNCOM RULR Team
-```
-
----
-
-## 🎓 Training Checklist
-
-### Basic Training (All Users)
-
-```yaml
-Module 1 - Platform Overview (15 min):
-  - [ ] Platform purpose and capabilities
-  - [ ] Navigation overview
-  - [ ] Dashboard walkthrough
-  
-Module 2 - Account Management (10 min):
-  - [ ] Change password
-  - [ ] Update profile
-  - [ ] Notification settings
-  
-Module 3 - Security Best Practices (10 min):
-  - [ ] Password security
-  - [ ] MFA setup (if available)
-  - [ ] Session management
-```
-
-### Role-Specific Training
-
-#### Operators
-```yaml
-Module - Device Operations (30 min):
-  - [ ] View device status
-  - [ ] Control individual devices
-  - [ ] Control device groups
-  - [ ] Respond to alarms
-  - [ ] Basic troubleshooting
-```
-
-#### Project Managers
-```yaml
-Module - Management Functions (45 min):
-  - [ ] Device configuration
-  - [ ] Rule creation and management
-  - [ ] Report generation
-  - [ ] Dashboard customization
-  - [ ] User overview in scope
-```
-
-#### Administrators
-```yaml
-Module - Administration (60 min):
-  - [ ] User management
-  - [ ] Role configuration
-  - [ ] System settings
-  - [ ] Audit log review
-  - [ ] Integration management
-```
-
----
-
-## 🔍 Verification Steps
-
-### Post-Creation Verification
-
-```yaml
-1. Login Test:
-   - [ ] User can access login page
-   - [ ] Credentials work correctly
-   - [ ] Password change successful
-   
-2. Permission Test:
-   - [ ] Can access dashboard
-   - [ ] Can see devices in scope
-   - [ ] Cannot see devices outside scope
-   - [ ] Can perform assigned actions
-   - [ ] Cannot perform restricted actions
-   
-3. Notification Test:
-   - [ ] Trigger test alarm
-   - [ ] Verify notification received
-```
-
-### Common Issues
-
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| Cannot login | Wrong credentials | Reset password |
-| Cannot login | Account disabled | Enable account |
-| No devices visible | Wrong scope | Adjust management scope |
-| Cannot control devices | Missing permission | Add devices.execute |
-| No alarms visible | Scope doesn't include alarming devices | Expand scope |
-
----
-
-## 📝 User Documentation
-
-### User Record Template
-
-```yaml
-User Information:
-  Username: jsmith
-  Full Name: John Smith
-  Email: john.smith@company.com
-  Phone: +1-555-123-4567
-  Department: Operations
-  Manager: Jane Doe
-  
-Account Details:
-  Created Date: 2025-01-23
-  Created By: admin
-  Role: Operator
-  Scope: North Region, Industrial Zone A
-  Last Login: 2025-01-23 09:15:00
-  Status: Active
-  
-Training:
-  Basic Training: Completed 2025-01-23
-  Role Training: Completed 2025-01-24
-  Certification: N/A
-  
-Notes:
-  - Primary contact for North Region field operations
-  - Scheduled for advanced training Q2 2025
-```
-
----
-
-## 🔄 User Lifecycle
-
-### Account States
-
-```mermaid
-stateDiagram-v2
-    [*] --> Created
-    Created --> Active: First login
-    Active --> Suspended: Admin action
-    Suspended --> Active: Admin reactivation
-    Active --> Locked: Too many failed logins
-    Locked --> Active: Timeout or admin unlock
-    Active --> Disabled: Offboarding
-    Disabled --> [*]: Deletion (optional)
-```
-
-### Offboarding Checklist
-
-```yaml
-When User Leaves:
-  Immediate:
-    - [ ] Disable account
-    - [ ] Revoke active sessions
-    - [ ] Remove from notification lists
-    
-  Within 24 Hours:
-    - [ ] Transfer ownership of rules
-    - [ ] Reassign managed resources
-    - [ ] Update documentation
-    
-  Within 30 Days:
-    - [ ] Archive user data (if required)
-    - [ ] Delete account (if policy allows)
-    - [ ] Update access audit records
-```
-
----
-
-## 🔗 Related Documentation
-
-- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: Authentication details
-- **[Permission Matrices](Permission%20Matrices.md)**: Permission reference
-- **[Role Design Patterns](Role%20Design%20Patterns.md)**: Role configuration
-- **[Security Architecture](../08-Development-Guide/Security%20Architecture.md)**: Security policies
+## Open questions
+- Whether Project Admin can create other Project Admins in the same project should be verified with product owner if needed.
+- Invite email / temporary password / SSO onboarding specifics may vary by deployment.

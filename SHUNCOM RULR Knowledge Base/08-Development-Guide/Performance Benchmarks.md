@@ -486,7 +486,6 @@ Network:
 ### Implementation
 - **[Testing Scenarios](Testing%20Scenarios.md)**: Performance test procedures
 - **[07-Development Roadmap](../07-Dashboard/07-Development%20Roadmap.md)**: Optimization timeline
-- **[Database Schema](../02-System-Architecture/Database%20Schema.md)**: Query optimization context
 
 ### Monitoring
 - **[API Design Patterns](API%20Design%20Patterns.md)**: API performance patterns

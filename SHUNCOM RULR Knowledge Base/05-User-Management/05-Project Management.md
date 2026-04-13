@@ -1,451 +1,173 @@
-# 📋 Project Management
+# Project Management
 
-> Quản lý dự án, cấu trúc phân cấp và cấu hình hiển thị
+## Overview
+- Canonical topic: Project domain
+- Goal: Chuẩn hóa tri thức về project hierarchy, project-device association, display information, lighting schedules, electricity consumption plan, và GIS distribution.
+- Primary users: BA, PM, QA, Dev, Ops, project admin, GIS operator
 
-{% hint style="info" %}
-**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
-{% endhint %}
-
-
----
-
-## 🏗️ Project Architecture
-
-### Project Hierarchy
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```mermaid
-graph TB
-    A[Organization] --> B[Top-level Projects]
-    B --> C[Sub-projects]
-    C --> D[Device Groups]
-    D --> E[Individual Devices]
-    
-    F[Unassigned Project] --> G[Ungrouped Devices]
-    
-    style F fill:#ffcccc
-    style G fill:#ffcccc
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```
-
-**Navigation**: `Settings > Equipment Management > Device Configuration > Project`
-
----
-
-## 📊 Project Structure
-
-### Default Projects (Auto-generated)
+## Provenance
+### Source summary
 ```yaml
-System Projects:
-  Top-level Projects:
-    - Auto-generated ✅
-    - Cannot be deleted ❌
-    - Container for all sub-projects
-    
-  Unassigned Project:
-    - Auto-generated ✅
-    - Cannot be deleted ❌
-    - Contains devices without project assignment
-    - ⚠️ Visible to ALL users (security concern)
+Document status: Canonical draft
+Confidence: Medium
+Last validated: 2026-04-12
+Validated by: Claude Code
+Primary source type: screenshot
+Canonical topic: project-management
 ```
 
-### Project Levels
-| Level | Description | Features |
-|-------|-------------|----------|
-| **Top-level** | Root project container | Organization-wide settings |
-| **Sub-project** | Operational project units | Device distribution, GIS mapping |
-| **Device Groups** | Device organization | Multicast, batch operations |
+### Primary sources used
+| Source | Path | Why it matters |
+|---|---|---|
+| Manual screenshot | `manual-images/p20_Image256.png` | Display information > energy saving overview / energy composition |
+| Flow doc | `docs/shuncom-iot-screen-flows.md` | flows 4, 5, 20, 21, 22 |
+| BA doc | `docs/shuncom-iot-ba-user-stories.md` | project creation, GIS, display-info, schedule, ECP intent |
+| Traceability map | `docs/shuncom-iot-story-flow-screen-module-mapping.md` | project/dashboard flow mapping |
+| Analysis doc | `SHUNCOM_RULR_IoT_Platform_Analysis.md` | project hierarchy, GIS distribution methods, ECP, display modules |
 
----
+### Validation gaps
+- Tên đầy đủ của tất cả 8 dashboard modules có thể khác nhẹ giữa manual screenshot và tài liệu cũ.
+- Polygon/boundary backend schema cho GIS chưa được xác nhận từ code.
 
-## ➕ Project Creation
+## Scope
+### In scope
+- Project hierarchy và default project buckets
+- Project creation / edit / association
+- Display information configuration
+- Lighting schedules today
+- Electricity consumption plan (ECP)
+- GIS map distribution
 
-### Basic Information Configuration
-```yaml
-Required Fields:
-  Project Name: "North Region Street Lighting"
-  Parent Project: [Select from hierarchy]
-  
-Optional Fields:
-  Description: "Municipal street lighting for north district"
-  Location: "North District, City Center"
-  Coordinates: "Lat: 40.7128, Long: -74.0060"
-  Contact Person: "John Smith"
-  Contact Email: "john.smith@city.gov"
-```
+### Out of scope
+- GIS provider integration implementation chi tiết
+- Database geometry schema chi tiết
+- Dashboard widget rendering internals
 
-### Project Operations
-- **Add**: Create new projects at any hierarchy level
-- **Edit**: Modify project information and settings
-- **Delete**: Remove projects (with dependency checks)
-- **Move**: Reorganize project hierarchy
+## Traceability
+### Related stories
+- `US-PRJ-02` - Tạo project
+- `US-PRJ-04` - Gán thiết bị vào project
+- `US-PRJ-06` - Phân bố thiết bị trên GIS
+- `US-DASH-01` - Cấu hình Display Information
+- `US-DASH-02` - Cấu hình Lighting schedules today
+- `US-DASH-03` - Cấu hình Electricity Consumption Plan
 
----
+### Related flows
+- Flow 4 - Tạo Project
+- Flow 5 - Gán Thiết bị vào Project
+- Flow 20 - Cấu hình Display Information
+- Flow 21 - Cấu hình Lighting Schedules Today
+- Flow 22 - Cấu hình Electricity Consumption Plan
 
-## 🎨 Display Information Configuration
+### Main screens / contexts
+| Screen / Context | Purpose | Evidence |
+|---|---|---|
+| `Device configuration > Project` | create/edit project và hierarchy | `[SRC:FLOW-4]` |
+| Associated devices | bind thiết bị vào project | `[SRC:FLOW-5]` |
+| Display information | chọn module/style/content cho project dashboard | `[SRC:FLOW-20]` |
+| Energy saving overview | chọn energy composition / data source | `[SRC:IMG-p20_Image256.png]` |
+| GIS distribution screen | đặt thiết bị lên bản đồ / path distribution | `[SRC:ANALYSIS-gis]` |
 
-### Dashboard Module System
-**Navigation**: `Settings > Equipment Management > Device Configuration > Edit Project > Display Information`
+## Business responsibilities
+- Tổ chức thiết bị theo project hierarchy.
+- Cung cấp scope chính cho dashboard, GIS, rules, và access control.
+- Quản lý display information cho homepage theo project.
+- Quản lý lịch chiếu sáng và ECP ở cấp project.
 
-#### 8 Configurable Modules
+## Project hierarchy model
+| Level | Role |
+|---|---|
+| Top-level project | root container / organization grouping |
+| Sub-project | operational scope chính cho device distribution và GIS |
+| Associated devices | thiết bị thuộc project |
+| Unassigned project | bucket mặc định cho thiết bị chưa gán project |
 
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```mermaid
-graph LR
-    A[Dashboard] --> B[Module 1: Device Overview]
-    A --> C[Module 2: Lighting Distribution]
-    A --> D[Module 3: Energy Statistics]
-    A --> E[Module 4: Alarm Summary]
-    A --> F[Module 5: Weather Info]
-    A --> G[Module 6: Schedule Display]
-    A --> H[Module 7: Performance Metrics]
-    A --> I[Module 8: Custom Widget]
+## Core capabilities
+### 1. Create and maintain projects
+- Tạo project với tên, manager, mô tả, địa chỉ, coordinates, map/background mode.
+- Sửa/xóa/move project theo hierarchy nếu quyền cho phép.
 
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```
+### 2. Associate devices
+- Project là context để nhìn thấy và vận hành thiết bị.
+- Thiết bị có thể được gán vào project từ project page hoặc trong onboarding/import flow.
 
-### Style Configuration
-```yaml
-Display Styles:
-  Technology Style:
-    - Modern tech aesthetic
-    - Blue/gray color scheme
-    - Data-focused layout
-    
-  Future Style:
-    - Futuristic design
-    - Dynamic animations
-    - Dark theme friendly
+### 3. Configure display information
+- Chọn style, usage scenario, title settings, modules bật/tắt.
+- Có preview và có thể batch-apply cho project khác theo nguồn hiện có.
 
-Title Settings:
-  - Custom project name display
-  - Font family selection
-  - Font size adjustment
-  - Color customization
-```
+### 4. Configure lighting schedules
+- Hỗ trợ fixed time hoặc sunrise/sunset hoặc sensor threshold based logic.
+- Cấu hình này liên kết chặt với dashboard và rule/schedule behavior.
 
-### Module Switch System
-```yaml
-Module Visibility:
-  Lighting Distribution: ON/OFF
-  Energy Statistics: ON/OFF
-  Alarm Summary: ON/OFF
-  Weather Information: ON/OFF
-  
-Content Requirements:
-  Some modules require data configuration:
-    - Lighting Schedules: Need schedule setup
-    - Energy Plan: Need ECP configuration
-    - Statistics: Need data source selection
-```
+### 5. Configure ECP
+- Kế hoạch điện năng năm/tháng/ngày.
+- Dùng cho dashboard energy overview và cảnh báo vượt ngưỡng.
 
----
+### 6. GIS distribution
+- Đặt thiết bị theo tọa độ cụ thể hoặc phân bố hàng loạt theo path.
+- Có fine-tuning coordinates sau khi đã lên map.
 
-## ⏰ Lighting Schedules Configuration
+## Display information model
+### Common display configuration areas
+| Area | Purpose |
+|---|---|
+| Style / theme | hình thức hiển thị homepage |
+| Title settings | tên project / màu / font |
+| Module switches | bật tắt module thống kê / hiển thị |
+| Usage scenario | ngữ cảnh vận hành như smart lighting |
+| Preview | xem trước layout |
+| Batch apply | copy config sang project khác |
 
-### Schedule Setup
-**Navigation**: `Display Information > Usage Scenario > Smart Lighting > Lighting Schedules Today`
+### Energy saving overview
+- Screenshot xác nhận lựa chọn `energy consumption composition` theo source như Smart Electric Meter hoặc Smart light controller `[SRC:IMG-p20_Image256.png]`.
+- Điều này cho thấy analytics/data-source configuration là một phần của project display settings.
 
-#### Time Configuration Options
-```yaml
-Light On/Off Time Options:
-  Fixed Time:
-    - Manual time entry
-    - Consistent daily schedule
-    - Example: "18:00 ON, 06:00 OFF"
-    
-  Sunrise/Sunset:
-    - Auto-calculated from coordinates
-    - Daily adjustment based on location
-    - Seasonal variation support
-    
-  Illuminance Sensor:
-    - Threshold-based triggering
-    - Light ON threshold: "< 50 lux"
-    - Light OFF threshold: "> 200 lux"
-```
+## GIS distribution behavior
+### Preconditions
+- Thường cần second-level project theo analysis doc.
+- Thiết bị phải có hoặc được gán coordinates.
+- Project phải dùng GIS environment nếu muốn map distribution đầy đủ.
 
-#### Schedule Display
-```yaml
-Homepage Display:
-  - Current day schedule
-  - Next switching time
-  - Countdown timer
-  - Schedule status indicator
-```
+### Distribution methods
+| Method | Summary |
+|---|---|
+| Single device | chọn 1 device rồi đặt vị trí trực tiếp |
+| Batch by path | chọn nhiều device rồi phân bố dọc path |
+| Fine-tune | kéo/thả để chỉnh tọa độ |
 
----
+## Business constraints
+- Unassigned project là bucket mặc định nhưng có thể tạo rủi ro visibility nếu thiết bị chưa gán đúng project.
+- GIS distribution thường chỉ có ý nghĩa đầy đủ ở sub-project / second-level project.
+- Sunrise/sunset schedule phụ thuộc coordinates hợp lệ.
+- Dashboard và analytics phụ thuộc data-source composition được chọn ở display information.
+- ECP cần annual/monthly/daily target hợp lý; warning ratio ảnh hưởng hiển thị cảnh báo.
+- Project scope ảnh hưởng user visibility, dashboard data, và rule targeting.
 
-## ⚡ Electricity Consumption Plan (ECP)
+## Logging and audit implications
+- Audit log: create/edit/delete/move project, device association/disassociation.
+- Operational log: display-info updates, GIS redistribution, schedule/ECP changes.
+- Analytics dependency log: thay đổi data source có thể ảnh hưởng dashboard interpretation.
 
-### ECP Configuration
-**Navigation**: `Display Information > ECP > Setting`
+## API contract posture
+- Các API touchpoints dưới đây là inventory-level references để nối domain doc với API map.
+- Contract chính thức phải defer về [API Endpoints Map](../02-System-Architecture/API%20Endpoints%20Map.md) và backend/OpenAPI source nếu có.
 
-#### Annual Planning
-```yaml
-Configuration Steps:
-  1. Select Year: "2025"
-  2. Enter Annual Plan: "1,000,000 kWh"
-  3. Auto-distribution: Divided evenly to months/days
-  4. Manual Adjustment: Fine-tune monthly/daily values
-  5. Warning Percentage: "90%" (threshold for alerts)
-```
+## Data and integration touchpoints
+| Type | Item | Purpose |
+|---|---|---|
+| API | `GET /projects` | list project hierarchy and summary |
+| API | `POST /projects` | create project |
+| API | device/project association flows | bind devices |
+| Data | project, group, coordinates, boundary | GIS and scope |
+| Dashboard | project-based statistics | homepage / analytics |
 
-#### Energy Saving Calculation
-```yaml
-Energy Saving Rate Formula:
-  Rate = [(Planned - Actual) / Planned] × 100%
-  
-  Where:
-    Planned = Planned consumption accumulated to yesterday
-    Actual = Actual consumption accumulated to yesterday
-    
-Display Colors:
-  Green: Within normal range
-  Red: Exceeded warning percentage
-```
+## Related docs
+- [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)
+- [06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)
+- [04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)
+- [GIS Setup Guide](../06-Project-Management/GIS%20Setup%20Guide.md)
+- [API Endpoints Map](../02-System-Architecture/API%20Endpoints%20Map.md)
 
-### Energy Saving Overview
-**Navigation**: `Display Information > Energy Saving Overview`
-
-```yaml
-Data Source Configuration:
-  Select Energy Sources:
-    - Smart Meters: ✅
-    - Gateway readings: ✅
-    - Light controller data: ✅
-    
-  Aggregation Method:
-    - Sum all sources
-    - Weighted average
-    - Primary source only
-```
-
----
-
-## 🖼️ Preview & Customization
-
-### Dashboard Preview
-**Navigation**: `Display Information > Preview`
-
-#### Drag-and-Drop Interface
-```yaml
-Customization Features:
-  Module Arrangement:
-    - Drag modules to reposition
-    - Resize module dimensions
-    - Show/hide individual modules
-    
-  Layout Options:
-    - Grid-based positioning
-    - Responsive breakpoints
-    - Mobile vs desktop layouts
-```
-
-### Batch Apply Configuration
-**Navigation**: `Display Information > Batch Apply`
-
-```yaml
-Configuration Copying:
-  Source Project: "North Region" (current)
-  Target Projects: 
-    - "South Region" ✅
-    - "East Region" ✅
-    - "West Region" ✅
-    
-  Copy Options:
-    - Display style ✅
-    - Module arrangement ✅
-    - Title settings ✅
-    - Schedule configuration ✅
-```
-
----
-
-## 🔗 Device Association
-
-### Associate Devices to Project
-**Navigation**: `Settings > Equipment Management > Project > Associated Devices`
-
-#### Association Methods
-```yaml
-Method 1: From Project Page
-  Steps:
-    1. Select project
-    2. Click "Associated Devices"
-    3. Select devices from available list
-    4. Confirm association
-    
-Method 2: During Device Import
-  Steps:
-    1. Prepare import file
-    2. Include project column
-    3. Import devices
-    4. Auto-association applied
-
-Method 3: Individual Device Edit
-  Steps:
-    1. Open device configuration
-    2. Select "Parent Project" field
-    3. Choose target project
-    4. Save changes
-```
-
-#### Disassociation Process
-```yaml
-Remove Device from Project:
-  1. Navigate to project's associated devices
-  2. Select device(s) to remove
-  3. Click "Disassociate" or "Move out"
-  4. Device moves to "Unassigned Project"
-  
-⚠️ Warning: Unassigned devices visible to all users
-```
-
----
-
-## 🗺️ GIS Map Distribution
-
-### Distribution Requirements
-```yaml
-Prerequisites:
-  - Second-level project (sub-project) ✅
-  - GIS map selected as environment ✅
-  - Devices have coordinates ✅
-  
-Availability:
-  ❌ Top-level projects: No distribution
-  ✅ Sub-projects: Full distribution support
-```
-
-### Distribution Methods
-
-#### Single Device Distribution
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant M as Map
-    participant D as Device
-    
-    U->>M: Search location on map
-    U->>D: Select 1 device from list
-    U->>M: Click "Batch Distribution"
-    U->>M: Double-click target location
-    M->>D: Update device coordinates
-    D-->>M: Refresh device position
-```
-
-#### Batch Device Distribution
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant M as Map
-    participant D as Devices
-    
-    U->>M: Search approximate location
-    U->>D: Select 2+ devices from list
-    U->>M: Click "Batch Distribution"
-    U->>M: Click points to draw path
-    U->>M: Double-click to end path
-    M->>D: Distribute devices evenly on path
-    D-->>M: Refresh all device positions
-```
-
-#### Coordinate Fine-tuning
-```yaml
-Prerequisites:
-  - Device already distributed on map
-  
-Process:
-  1. Click "Fine-tuning coordinate" mode
-  2. Click on device marker
-  3. Drag device to new position
-  4. Click "Save"
-  5. System refreshes device location
-```
-
-### Map Interface Features
-```yaml
-Search & Navigation:
-  - Location search box
-  - Device name search
-  - Device number search
-  - Product type filter
-  
-Display Options:
-  - Device icons by category
-  - Status-based colors
-  - Clustering for dense areas
-  - Info popup on click
-```
-
----
-
-## ⚠️ Critical Considerations
-
-### Security Implications
-```yaml
-Unassigned Devices Risk:
-  Problem: Devices without project = visible to ALL users
-  Impact: Security and access control bypass
-  Solution: Always assign devices to specific projects
-  
-Best Practice:
-  ✅ Create project structure FIRST
-  ✅ Assign devices during import
-  ✅ Regular audit for unassigned devices
-  ✅ Restrict "Unassigned Project" visibility
-```
-
-### Project Planning Best Practices
-```yaml
-Before Creating Projects:
-  1. Define organizational hierarchy
-  2. Plan device grouping strategy
-  3. Determine access control needs
-  4. Map physical locations to projects
-  
-Project Naming Conventions:
-  Format: "[Region]_[Type]_[Identifier]"
-  Examples:
-    - "North_StreetLighting_Main"
-    - "Industrial_Zone_A_Meters"
-    - "Campus_Building_1_Lights"
-```
-
----
-
-## 🔗 Related Documentation
-
-### Dependencies
-- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)** - Project access permissions
-- **[03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md)** - Device-project associations
-- **[04-Rule Engine System](../04-Rule-Management/04-Rule%20Engine%20System.md)** - Project-scoped rules
-- **[06-Dashboard Interface](../06-Project-Management/06-Dashboard%20Interface.md)** - Project dashboard views
-
-### Configuration Guides
-- **[[GIS Integration Guide]]** - Detailed mapping setup
-- **[[Dashboard Configuration]]** - Module customization
-- **[[Energy Management Setup]]** - ECP configuration
-- **[[Multi-tenant Architecture]]** - Organization isolation
-
----
-
-**Next Steps**: After project structure is established, proceed to [03-Device Management Hub](../03-Device-Management/03-Device%20Management%20Hub.md) for device registration and association workflows.
+## Open questions
+- Boundary/polygon data contract và validation rules cho GIS chưa được xác nhận từ source code/backend.
+- Rule precedence giữa project-level display schedule, local rules, và platform rules cần thêm confirmation nếu dùng làm contract nghiệp vụ chính thức.

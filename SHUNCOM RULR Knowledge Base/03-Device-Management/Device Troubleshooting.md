@@ -20,11 +20,11 @@ status: final
 
 | Symptom | Likely Cause | First Check | Reference |
 |---------|--------------|-------------|-----------|
-| Device offline | Network/power | Physical connection | [[#Offline Issues]] |
-| No control response | Association missing | Fixture linked? | [[#Control Issues]] |
-| Wrong readings | Configuration | Transformer ratio | [[#Data Issues]] |
-| Sync failed | Gateway issue | Gateway online? | [[#Sync Issues]] |
-| Commands delayed | Network congestion | Signal strength | [[#Performance Issues]] |
+| Device offline | Network/power | Physical connection | [Offline Issues](#offline-issues) |
+| No control response | Association missing | Fixture linked? | [Control Issues](#control-issues) |
+| Wrong readings | Configuration | Transformer ratio | [Data Issues](#data-issues) |
+| Sync failed | Gateway issue | Gateway online? | [Sync Issues](#sync-issues) |
+| Commands delayed | Network congestion | Signal strength | [Performance Issues](#performance-issues) |
 
 ---
 
@@ -599,6 +599,5 @@ Troubleshooting SIM:
 ## 🔗 Related Documentation
 
 - **[03-Device Management Hub](03-Device%20Management%20Hub.md)**: Device configuration
-- **[Device Types Reference](../Device%20Types%20Reference.md)**: Device specifications
+- **[Device Types Reference](Device%20Types%20Reference.md)**: Device specifications
 - **[Troubleshooting Guide](../08-Development-Guide/Troubleshooting%20Guide.md)**: General troubleshooting
-- **[Glossary](../01-Overview/Glossary.md)**: Technical terms

@@ -599,5 +599,3 @@ Authentication:
 
 - **[03-Device Management Hub](03-Device%20Management%20Hub.md)**: Device configuration
 - **[Device Troubleshooting](Device%20Troubleshooting.md)**: Protocol troubleshooting
-- **[Integration Guide](../02-System-Architecture/Integration%20Guide.md)**: External integrations
-- **[Glossary](../01-Overview/Glossary.md)**: Protocol terminology

@@ -574,5 +574,4 @@ Watch For:
 
 - **[04-Rule Engine System](04-Rule%20Engine%20System.md)**: Rule engine overview
 - **[Local Rules Best Practices](Local%20Rules%20Best%20Practices.md)**: Local rule guidance
-- **[Rule Configuration Template](../99-Templates/Rule%20Configuration%20Template.md)**: Rule documentation template
 - **[Testing Scenarios](../08-Development-Guide/Testing%20Scenarios.md)**: Rule testing procedures

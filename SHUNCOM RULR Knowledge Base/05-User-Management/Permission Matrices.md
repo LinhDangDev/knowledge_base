@@ -1,418 +1,167 @@
----
-title: Permission Matrices
-tags: [permissions, rbac, authorization, security, user-management]
-created: 2025-01-23
-updated: 2025-01-23
-status: final
----
+# Permission Matrices
 
-# 🔐 Permission Matrices
+## Overview
+- Canonical topic: Role and permission matrix
+- Goal: Định nghĩa matrix quyền chuẩn cho 3 role chính của SHUNCOM RULR: Manufacturer, Project Admin, Project Member.
+- Primary users: BA, PM, QA, Dev, security reviewer, Manufacturer, Project Admin
 
-> Comprehensive permission mappings for SHUNCOM RULR role-based access control
-
-{% hint style="info" %}
-**Platform:** SHUNCOM RULR IoT Platform v1.1 | **Last Updated:** January 2025
-{% endhint %}
-
----
-
-## 📊 Role Overview
-
-### Standard Roles
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```mermaid
-graph TB
-    A[Super Admin] --> B[Organization Admin]
-    B --> C[Project Manager]
-    C --> D[Operator]
-    D --> E[Viewer]
-    
-    A1[Full System Access]
-    B1[Organization Scope]
-    C1[Project Scope]
-    D1[Device Control]
-    E1[Read Only]
-    
-    A --- A1
-    B --- B1
-    C --- C1
-    D --- D1
-    E --- E1
-
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```
-
-### Role Hierarchy
-| Role | Level | Default Scope | Typical Users |
-|------|-------|---------------|---------------|
-| Super Admin | 0 | System-wide | Platform administrators |
-| Org Admin | 1 | Organization | Company IT managers |
-| Project Manager | 2 | Assigned projects | Regional managers |
-| Operator | 3 | Assigned devices/groups | Field technicians |
-| Viewer | 4 | Assigned resources | Stakeholders, auditors |
-
----
-
-## 📋 Master Permission Matrix
-
-### Device Permissions
-
-| Permission | Super Admin | Org Admin | Project Mgr | Operator | Viewer |
-|------------|:-----------:|:---------:|:-----------:|:--------:|:------:|
-| `devices.read` | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `devices.write` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `devices.delete` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `devices.execute` | ✅ | ✅ | ✅ | ✅ | ❌ |
-| `devices.import` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `devices.export` | ✅ | ✅ | ✅ | ✅ | ✅ |
-
-### Rule Permissions
-
-| Permission | Super Admin | Org Admin | Project Mgr | Operator | Viewer |
-|------------|:-----------:|:---------:|:-----------:|:--------:|:------:|
-| `rules.read` | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `rules.write` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `rules.delete` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `rules.execute` | ✅ | ✅ | ✅ | ✅ | ❌ |
-| `rules.local.manage` | ✅ | ✅ | ✅ | ❌ | ❌ |
-
-### Alarm Permissions
-
-| Permission | Super Admin | Org Admin | Project Mgr | Operator | Viewer |
-|------------|:-----------:|:---------:|:-----------:|:--------:|:------:|
-| `alarms.read` | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `alarms.acknowledge` | ✅ | ✅ | ✅ | ✅ | ❌ |
-| `alarms.resolve` | ✅ | ✅ | ✅ | ✅ | ❌ |
-| `alarms.configure` | ✅ | ✅ | ✅ | ❌ | ❌ |
-
-### User Management Permissions
-
-| Permission | Super Admin | Org Admin | Project Mgr | Operator | Viewer |
-|------------|:-----------:|:---------:|:-----------:|:--------:|:------:|
-| `users.read` | ✅ | ✅ | ✅* | ❌ | ❌ |
-| `users.write` | ✅ | ✅ | ❌ | ❌ | ❌ |
-| `users.delete` | ✅ | ✅ | ❌ | ❌ | ❌ |
-| `users.admin` | ✅ | ✅ | ❌ | ❌ | ❌ |
-| `roles.read` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `roles.write` | ✅ | ✅ | ❌ | ❌ | ❌ |
-
-*Project Manager can see users in their projects only
-
-### Project Permissions
-
-| Permission | Super Admin | Org Admin | Project Mgr | Operator | Viewer |
-|------------|:-----------:|:---------:|:-----------:|:--------:|:------:|
-| `projects.read` | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `projects.write` | ✅ | ✅ | ✅* | ❌ | ❌ |
-| `projects.delete` | ✅ | ✅ | ❌ | ❌ | ❌ |
-| `projects.admin` | ✅ | ✅ | ❌ | ❌ | ❌ |
-
-*Project Manager can edit within their assigned projects
-
-### Dashboard & Reports Permissions
-
-| Permission | Super Admin | Org Admin | Project Mgr | Operator | Viewer |
-|------------|:-----------:|:---------:|:-----------:|:--------:|:------:|
-| `dashboard.read` | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `dashboard.configure` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `reports.read` | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `reports.generate` | ✅ | ✅ | ✅ | ✅ | ❌ |
-| `reports.schedule` | ✅ | ✅ | ✅ | ❌ | ❌ |
-
-### System Settings Permissions
-
-| Permission | Super Admin | Org Admin | Project Mgr | Operator | Viewer |
-|------------|:-----------:|:---------:|:-----------:|:--------:|:------:|
-| `settings.system.read` | ✅ | ✅ | ❌ | ❌ | ❌ |
-| `settings.system.write` | ✅ | ❌ | ❌ | ❌ | ❌ |
-| `settings.org.read` | ✅ | ✅ | ✅ | ❌ | ❌ |
-| `settings.org.write` | ✅ | ✅ | ❌ | ❌ | ❌ |
-| `audit.read` | ✅ | ✅ | ✅* | ❌ | ❌ |
-
-*Project Manager sees audit for their scope only
-
----
-
-## 🎯 Scope-Based Access
-
-### Scope Types
-
+## Provenance
+### Source summary
 ```yaml
-System Scope (Super Admin only):
-  Access: All organizations, all resources
-  Use: Platform maintenance, cross-org operations
-  
-Organization Scope:
-  Access: Single organization, all projects
-  Use: Org admins managing their company
-  
-Project Scope:
-  Access: Specific projects and sub-projects
-  Use: Regional/site managers
-  
-Group Scope:
-  Access: Specific device groups
-  Use: Team leads, zone operators
-  
-Device Scope:
-  Access: Individual devices
-  Use: Specialized technicians
+Document status: Canonical draft
+Confidence: Medium
+Last validated: 2026-04-12
+Validated by: Claude Code
+Primary source type: user-confirmed-business-rule
+Canonical topic: permission-matrices
 ```
 
-### Scope + Permission Interaction
+### Primary sources used
+| Source | Path | Why it matters |
+|---|---|---|
+| User instruction in chat | current conversation | canonical role model confirmed by user |
+| Existing KB doc | `05-User-Management/Permission Matrices.md` | previous matrix baseline to replace |
+| Existing KB doc | `05-User-Management/Role Design Patterns.md` | old role hierarchy to refactor |
+| Existing KB doc | `02-System-Architecture/02-Authentication System.md` | auth/scope architecture context |
+| BA doc | `docs/shuncom-iot-ba-user-stories.md` | role/user/scope stories needing updates |
+| Flow doc | `docs/shuncom-iot-screen-flows.md` | login/user/scope flows |
 
-```yaml
-Example: User with devices.execute + Project Scope [Project A, Project B]
+### Validation gaps
+- Exact permission-key naming in backend/API still needs source verification.
+- Delegation model for Project Member is business-confirmed, but UI granularity for every permission toggle still needs implementation verification.
 
-Can:
-  ✅ Control devices in Project A
-  ✅ Control devices in Project B
-  ✅ Control devices in sub-projects of A and B
-  
-Cannot:
-  ❌ Control devices in Project C
-  ❌ Control devices not in any project
-  ❌ Create/modify devices (no devices.write)
-```
+## Scope
+### In scope
+- Standard roles
+- Permission families
+- Scope behavior
+- Management responsibility boundaries
 
-### Scope Inheritance
+### Out of scope
+- Backend permission engine implementation
+- Token/session claims format
+- Legacy role migration playbook
 
+## Standard roles
+### 1. Manufacturer
+- Scope: toàn hệ thống
+- Visibility: tất cả area / project / group / device
+- Permission posture: toàn quyền
+- Use case: platform owner / manufacturer-level operator
 
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```mermaid
-graph TD
-    A[Organization] --> B[Project 1]
-    A --> C[Project 2]
-    B --> D[Sub-project 1.1]
-    B --> E[Sub-project 1.2]
-    
-    F[User Scope: Project 1] --> B
-    F -.->|Inherits| D
-    F -.->|Inherits| E
-    F -.-x|No Access| C
+### 2. Project Admin
+- Scope: project đang được giao quản lý
+- Visibility: toàn bộ resource trong project đó
+- Permission posture: toàn quyền trong project scope
+- Use case: người vận hành/quản lý dự án
 
-    classDef default fill:#4A90E2,stroke:#2E5C8A,stroke-width:2px,color:#fff
-    classDef primary fill:#7B68EE,stroke:#5A4FC4,stroke-width:2px,color:#fff
-    classDef success fill:#50C878,stroke:#3A9B5C,stroke-width:2px,color:#fff
-    classDef warning fill:#FFA500,stroke:#CC8400,stroke-width:2px,color:#fff
-    classDef danger fill:#FF6B6B,stroke:#CC5555,stroke-width:2px,color:#fff
-```
+### 3. Project Member
+- Scope: project hoặc phần resource do Project Admin gán
+- Visibility: theo cấu hình của Project Admin
+- Permission posture: configurable by Project Admin
+- Use case: member/operator/view-only/technician trong phạm vi project
 
----
+## Scope behavior
+| Role | Scope model | Notes |
+|---|---|---|
+| Manufacturer | all areas / all projects / all resources | global top-level role |
+| Project Admin | assigned managed project(s) | full control only inside managed project scope |
+| Project Member | subset of project scope | quyền và visibility do Project Admin cấu hình |
 
-## 📝 Custom Role Configuration
+## Master permission matrix
+### Device permissions
+| Permission family | Manufacturer | Project Admin | Project Member |
+|---|:---:|:---:|:---:|
+| View devices | ✅ | ✅ | Configurable |
+| Create devices | ✅ | ✅ | Configurable |
+| Update devices | ✅ | ✅ | Configurable |
+| Delete / recycle devices | ✅ | ✅ | Configurable |
+| Execute device commands | ✅ | ✅ | Configurable |
+| Import / export devices | ✅ | ✅ | Configurable |
 
-### Creating Custom Roles
+### Rule permissions
+| Permission family | Manufacturer | Project Admin | Project Member |
+|---|:---:|:---:|:---:|
+| View rules | ✅ | ✅ | Configurable |
+| Create / edit rules | ✅ | ✅ | Configurable |
+| Delete rules | ✅ | ✅ | Configurable |
+| Enable / disable / execute rules | ✅ | ✅ | Configurable |
+| Manage local-rule sync | ✅ | ✅ | Configurable |
+| Manage alarm rules | ✅ | ✅ | Configurable |
 
-```yaml
-Role Definition:
-  name: "Energy Manager"
-  code: "energy_manager"
-  type: custom
-  organization_id: "org_123"
-  
-Permissions:
-  - devices.read
-  - devices.export
-  - dashboard.read
-  - dashboard.configure
-  - reports.read
-  - reports.generate
-  - reports.schedule
-  
-Excluded (by omission):
-  - devices.write
-  - devices.execute
-  - rules.*
-  - users.*
-```
+### Alarm permissions
+| Permission family | Manufacturer | Project Admin | Project Member |
+|---|:---:|:---:|:---:|
+| View alarms | ✅ | ✅ | Configurable |
+| Acknowledge / process alarms | ✅ | ✅ | Configurable |
+| Resolve alarms | ✅ | ✅ | Configurable |
+| Configure alarm settings | ✅ | ✅ | Configurable |
 
-### Permission Groups
+### Project permissions
+| Permission family | Manufacturer | Project Admin | Project Member |
+|---|:---:|:---:|:---:|
+| View projects | ✅ | ✅ | Configurable |
+| Create / edit projects | ✅ | ✅ | Configurable if allowed |
+| Delete projects | ✅ | ✅ | Typically restricted; configurable only if business allows |
+| Configure display information | ✅ | ✅ | Configurable |
+| Configure GIS / schedule / ECP | ✅ | ✅ | Configurable |
 
-```yaml
-Read-Only Group:
-  - *.read
-  - devices.export
-  - reports.read
-  
-Device Control Group:
-  - devices.read
-  - devices.execute
-  - alarms.read
-  - alarms.acknowledge
-  
-Full Management Group:
-  - devices.*
-  - rules.*
-  - alarms.*
-  - projects.read
-  - projects.write
-```
+### User and membership permissions
+| Permission family | Manufacturer | Project Admin | Project Member |
+|---|:---:|:---:|:---:|
+| View users in scope | ✅ | ✅ | Typically no |
+| Create project members | ✅ | ✅ | No |
+| Update project member permissions | ✅ | ✅ | No |
+| Remove project members | ✅ | ✅ | No |
+| Create new top-level role types | No standard need | No | No |
 
----
+### Dashboard / report / log permissions
+| Permission family | Manufacturer | Project Admin | Project Member |
+|---|:---:|:---:|:---:|
+| View dashboard | ✅ | ✅ | Configurable |
+| Configure dashboard | ✅ | ✅ | Configurable |
+| View reports | ✅ | ✅ | Configurable |
+| Generate / export reports | ✅ | ✅ | Configurable |
+| View system logs / audit in scope | ✅ | ✅ | Configurable |
 
-## 🔍 Permission Check Logic
+## Delegation model for Project Member
+### Project Admin can configure
+- feature visibility
+- read/write/execute scope inside project
+- device/rule/dashboard/report visibility
+- optional narrower sub-scope by group/device/category if UI supports it
 
-### Authorization Flow
+### Project Admin cannot grant
+- authority outside managed project
+- Manufacturer-equivalent global access
+- permissions on projects they do not manage
 
-```mermaid
-sequenceDiagram
-    participant U as User Request
-    participant A as Auth Service
-    participant P as Permission Check
-    participant S as Scope Check
-    participant R as Resource
-    
-    U->>A: API Request + Token
-    A->>P: Check permission (devices.execute)
-    
-    alt Permission Denied
-        P-->>U: 403 Forbidden
-    else Permission Granted
-        P->>S: Check scope for resource
-        
-        alt Resource in Scope
-            S->>R: Execute operation
-            R-->>U: Success
-        else Resource NOT in Scope
-            S-->>U: 403 Forbidden (scope)
-        end
-    end
-```
+## Recommended permission-set patterns for Project Member
+| Pattern | Typical permissions |
+|---|---|
+| Viewer Member | read-only dashboard/devices/rules/reports |
+| Operator Member | view + execute commands + acknowledge alarms |
+| Engineer Member | operator rights + rule editing + selected config rights |
+| Analyst Member | read dashboards/reports/exports without control actions |
 
-### Permission Evaluation Rules
+## Business constraints
+- Manufacturer is the only global all-area/all-permission role.
+- Project Admin is powerful only within managed project boundaries.
+- Project Member is not a fixed low-power role; it is a configurable permission envelope.
+- Project Member permissions must always remain bounded by Project Admin project scope.
+- User visibility and operation rights depend on both role and scope.
 
-```yaml
-Rule 1 - Explicit Deny:
-  If user has explicit deny → Deny (not currently implemented)
-  
-Rule 2 - Required Permission:
-  If user lacks required permission → Deny
-  
-Rule 3 - Scope Check:
-  If resource outside user's scope → Deny
-  
-Rule 4 - Grant:
-  If permission exists AND resource in scope → Allow
-```
+## Logging and audit implications
+- Audit log must capture: member creation, permission changes, scope changes, removal from project.
+- Sensitive operations must record actor, target member, changed permission set, and timestamp.
+- Manufacturer and Project Admin changes should be especially visible in audit trails.
 
----
+## Related docs
+- [Role Design Patterns](Role%20Design%20Patterns.md)
+- [User Onboarding Guide](User%20Onboarding%20Guide.md)
+- [02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)
+- [Security Architecture](../08-Development-Guide/Security%20Architecture.md)
 
-## 📊 Common Role Configurations
-
-### Configuration: IT Administrator
-```yaml
-Role: Organization Admin
-Scope: Full organization
-Permissions: Full management
-
-Typical Tasks:
-  - User management
-  - System configuration
-  - All device operations
-  - Report generation
-```
-
-### Configuration: Regional Manager
-```yaml
-Role: Project Manager
-Scope: Specific projects (North Region, South Region)
-Permissions:
-  - devices.* (within scope)
-  - rules.* (within scope)
-  - reports.* (within scope)
-  - dashboard.configure
-
-Typical Tasks:
-  - Manage devices in region
-  - Create automation rules
-  - Generate regional reports
-  - Customize dashboard
-```
-
-### Configuration: Field Technician
-```yaml
-Role: Operator
-Scope: Assigned device groups
-Permissions:
-  - devices.read
-  - devices.execute
-  - alarms.read
-  - alarms.acknowledge
-  
-Typical Tasks:
-  - Monitor device status
-  - Control devices
-  - Respond to alarms
-  - Basic troubleshooting
-```
-
-### Configuration: External Auditor
-```yaml
-Role: Viewer
-Scope: Specific projects
-Permissions:
-  - *.read only
-  - reports.read
-  - dashboard.read
-  
-Typical Tasks:
-  - View device status
-  - Review reports
-  - Compliance checking
-```
-
----
-
-## ⚠️ Security Considerations
-
-### Least Privilege Principle
-```yaml
-Guidelines:
-  - Start with minimum permissions
-  - Add only what's needed
-  - Regular permission audits
-  - Remove unused permissions
-  
-Review Schedule:
-  - New users: After 30 days
-  - All users: Quarterly
-  - After role change: Immediately
-```
-
-### Sensitive Operations
-```yaml
-High-Risk Operations:
-  - users.admin → Can create admin users
-  - settings.system.write → Can modify system config
-  - devices.delete → Permanent data loss risk
-  - rules.delete → Can disable automation
-  
-Recommendations:
-  - Limit to minimum users
-  - Enable MFA for these users
-  - Audit all actions
-  - Consider approval workflows
-```
-
----
-
-## 🔗 Related Documentation
-
-- **[02-Authentication System](../02-System-Architecture/02-Authentication%20System.md)**: User authentication
-- **[Security Architecture](../08-Development-Guide/Security%20Architecture.md)**: Security implementation
-- **[Role Design Patterns](Role%20Design%20Patterns.md)**: Role configuration patterns
-- **[User Onboarding Guide](User%20Onboarding%20Guide.md)**: New user setup
+## Open questions
+- Exact permission-key names for Project Member delegation need backend/UI verification.
+- Whether Project Admin can create/edit/delete project records themselves in every deployment should be revalidated with product owner if needed.

@@ -54,7 +54,7 @@ graph TB
 **Scalability:** The platform supports up to **5,000+ devices** per batch operation
 {% endhint %}
 
-- **7 Device Categories** supported
+- **Current supported device set** spans gateway, controllers, sensors, metering, fixtures, poles, loop/control, and accessory-oriented devices
 - **Real-time monitoring** and control
 - **Multi-protocol support** (Zigbee, LoRa, NB-IoT, CAT.1)
 - **Batch operations** for efficient management
@@ -169,9 +169,8 @@ sequenceDiagram
 
 ### Technical Deep Dives
 
-- [Device Types Reference](../Device%20Types%20Reference.md) - Detailed device specifications
-- [API Endpoints Map](../02-System-Architecture/API%20Endpoints%20Map.md) - Complete API documentation
-- [Database Schema](../02-System-Architecture/Database%20Schema.md) - Data model and relationships
+- [Device Types Reference](../03-Device-Management/Device%20Types%20Reference.md) - Detailed device specifications
+- [API Endpoints Map](../02-System-Architecture/API%20Endpoints%20Map.md) - Canonical API inventory
 - [Performance Benchmarks](../08-Development-Guide/Performance%20Benchmarks.md) - System performance metrics
 
 ### Development Resources

@@ -501,7 +501,7 @@ Performance:
 ## 🔗 Related Documentation
 
 ### Planning Resources
-- **[Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md)** - Detailed requirements
+- **[Feature Requirements Checklist](../08-Development-Guide/Feature%20Requirements%20Checklist.md)** - Detailed requirements
 - **[Testing Scenarios](../08-Development-Guide/Testing%20Scenarios.md)** - QA planning
 - **[Performance Benchmarks](../08-Development-Guide/Performance%20Benchmarks.md)** - Performance targets
 
@@ -512,4 +512,4 @@ Performance:
 
 ---
 
-**Next Steps**: Review [Feature Requirements Checklist](../Feature%20Requirements%20Checklist.md) and begin Phase 1 Sprint 1 planning. Ensure team is assembled and development environment is ready.
+**Next Steps**: Review [Feature Requirements Checklist](../08-Development-Guide/Feature%20Requirements%20Checklist.md) and begin Phase 1 Sprint 1 planning. Ensure team is assembled and development environment is ready.

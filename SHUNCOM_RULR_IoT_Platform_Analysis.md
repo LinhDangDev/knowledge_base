@@ -120,16 +120,24 @@ graph TB
 
 ## 🔧 Device Management System
 
-### Supported Device Categories
+### Supported Device Set
 ```mermaid
 graph LR
-    A[Device Categories] --> B[Smart Gateway]
-    A --> C[Smart Light Controller]
-    A --> D[Lighting Fixture]
-    A --> E[Lighting Pole]
-    A --> F[Power Distribution Control]
-    A --> G[Loop Control]
-    A --> H[Smart Meter]
+    A[Supported Devices] --> B[Gateway]
+    A --> C[Industrial Controller]
+    A --> D[Smart Light Controller]
+    A --> E[Power Distribution Control]
+    A --> F[Weather Sensor]
+    A --> G[Environmental Sensor]
+    A --> H[Smart Electric Meter]
+    A --> I[Lighting Pole]
+    A --> J[Lighting Fixture]
+    A --> K[Loop Control]
+    A --> L[Smart Water Meter]
+    A --> M[Leakage Monitoring]
+    A --> N[Indoor Light Controller]
+    A --> O[Scene Panel]
+    A --> P[Accessory Device]
 ```
 
 ### 1. Smart Gateway
@@ -202,12 +210,22 @@ sequenceDiagram
 - **Built-in Loop Controller**: Device number = 0, Channel = 11, Protocol = GWLOOP
 - **Extended Loop Controller**: Device number = 4-255, Channel = 1 or 2, Protocol = Modbus
 
-### 7. Smart Meter
+### Smart Electric Meter
 #### Capabilities
 - **485 Three-phase Electricity Meter**
 - **Features**: Device synchronization, three-phase transformer ratio setting
 - **Protocol**: dlt645_07
 - **Default Channel**: 2
+
+### Additional supported devices
+- Industrial Controller
+- Weather Sensor
+- Environmental Sensor
+- Smart Water Meter
+- Leakage Monitoring
+- Indoor Light Controller
+- Scene Panel
+- Accessory Device
 
 ### Device Group Management
 #### Group Types
